@@ -1,3 +1,4 @@
+"use client"; 
 // app/blog/que-hacer-estocolmo-primavera-2026/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
