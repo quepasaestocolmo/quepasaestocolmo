@@ -2,9 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir | Qué Pasa Estocolmo",
-  description:
-    "Guía completa para ver los cerezos en flor en Estocolmo en 2026. Los mejores lugares, cuándo ir y tips de un local para vivir la floración como se merece.",
+  title: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir",
+  description: "Guía completa para ver los cerezos en flor en Estocolmo 2026.",
+  openGraph: {
+    title: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir",
+    description: "Guía completa para ver los cerezos en flor en Estocolmo 2026.",
+    url: "https://www.quepasaestocolmo.com/cerezos-estocolmo-2026",
+    images: [
+      {
+        url: "https://www.quepasaestocolmo.com/cerezos-hero.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "article",
+  },
 };
 
 export default function CerezosEstocolmo() {
