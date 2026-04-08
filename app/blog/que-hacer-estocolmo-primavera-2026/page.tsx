@@ -467,7 +467,7 @@ export default function PrimaveraEstocolmo2026() {
         </div>
       </article>
 
-      <style jsx>{`
+      <style>{`
         :root {
           --purple: #6b00da;
           --yellow: #FFD600;
