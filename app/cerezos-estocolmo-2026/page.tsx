@@ -100,7 +100,7 @@ const jsonLd = {
       })),
     },
     {
-      "@type": "Event",
+     "@type": "Event",
       name: "Día del Cerezo en Flor en Estocolmo 2026",
       startDate: "2026-04-28",
       endDate: "2026-04-28",
@@ -117,7 +117,6 @@ const jsonLd = {
         "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
       isAccessibleForFree: true,
     },
-  ],
 };
 
 export default function CerezosEstocolmo() {
