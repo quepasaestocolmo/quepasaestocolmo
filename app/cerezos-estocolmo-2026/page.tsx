@@ -100,10 +100,12 @@ const jsonLd = {
       })),
     },
     {
-     "@type": "Event",
+      "@type": "Event",
       name: "Día del Cerezo en Flor en Estocolmo 2026",
       startDate: "2026-04-28",
       endDate: "2026-04-28",
+      eventStatus: "https://schema.org/EventScheduled",
+      image: "https://www.quepasaestocolmo.com/cerezos-hero.webp",
       location: {
         "@type": "Place",
         name: "Kungsträdgården",
@@ -113,10 +115,8 @@ const jsonLd = {
           addressCountry: "SE",
         },
       },
-    description: "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
+      description: "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
       isAccessibleForFree: true,
-      eventStatus: "https://schema.org/EventScheduled",
-      image: "https://www.quepasaestocolmo.com/cerezos-hero.webp",
       organizer: {
         "@type": "Organization",
         name: "Kungsträdgården",
@@ -130,6 +130,7 @@ const jsonLd = {
         url: "https://www.quepasaestocolmo.com/en/cherry-blossoms-stockholm-2026",
       },
     },
+  ],
 };
 
 export default function CerezosEstocolmo() {
@@ -205,7 +206,7 @@ export default function CerezosEstocolmo() {
             <span>6 min de lectura</span>
           </div>
 
-          {/* PÁRRAFO CÁPSULA — respuesta directa para IA */}
+          {/* PÁRRAFO CÁPSULA */}
           <div style={{
             borderLeft: "4px solid #6b00da", backgroundColor: "#f5edff",
             borderRadius: "0 12px 12px 0", padding: "18px 22px", marginBottom: "36px"
@@ -215,7 +216,6 @@ export default function CerezosEstocolmo() {
             </p>
           </div>
 
-          {/* Intro */}
           <p style={{ fontSize: "19px", lineHeight: 1.75, marginBottom: "16px", fontWeight: 400 }}>
             Si vives en Estocolmo sabes que hay un momento del año que lo cambia todo. Es cuando florecen los cerezos y la ciudad entera despierta de golpe después del invierno. Dura poco — a veces solo dos semanas — pero es absolutamente mágico.
           </p>
@@ -223,7 +223,6 @@ export default function CerezosEstocolmo() {
             El año pasado los cerezos de Kungsträdgården ya estaban en plena floración el 12 de abril. Así que si estás planificando tu visita, esa es tu fecha de referencia.
           </p>
 
-          {/* Cuándo */}
           <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "16px", letterSpacing: "-0.01em" }}>
             ¿Cuándo florecen los cerezos en Estocolmo 2026?
           </h2>
@@ -237,7 +236,6 @@ export default function CerezosEstocolmo() {
             {" "}la floración varía cada año dependiendo de las temperaturas de invierno y primavera.
           </p>
 
-          {/* Tip box */}
           <div style={{
             backgroundColor: "#FFD600", borderRadius: "12px", padding: "18px 22px",
             marginBottom: "48px", display: "flex", gap: "12px", alignItems: "flex-start"
@@ -251,7 +249,6 @@ export default function CerezosEstocolmo() {
             </p>
           </div>
 
-          {/* Los mejores lugares */}
           <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "32px", letterSpacing: "-0.01em" }}>
             Los mejores lugares para ver cerezos en Estocolmo
           </h2>
@@ -335,7 +332,6 @@ export default function CerezosEstocolmo() {
             </div>
           </div>
 
-          {/* Tips fotos */}
           <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "24px", letterSpacing: "-0.01em" }}>
             Tips para sacar las mejores fotos
           </h2>
@@ -353,7 +349,6 @@ export default function CerezosEstocolmo() {
             ))}
           </div>
 
-          {/* FAQ */}
           <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "24px", letterSpacing: "-0.01em" }}>
             Preguntas frecuentes sobre los cerezos en Estocolmo 2026
           </h2>
