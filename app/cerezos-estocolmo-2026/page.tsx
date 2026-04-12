@@ -113,9 +113,22 @@ const jsonLd = {
           addressCountry: "SE",
         },
       },
-      description:
-        "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
+    description: "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
       isAccessibleForFree: true,
+      eventStatus: "https://schema.org/EventScheduled",
+      image: "https://www.quepasaestocolmo.com/cerezos-hero.webp",
+      organizer: {
+        "@type": "Organization",
+        name: "Kungsträdgården",
+        url: "https://kungstradgarden.stockholm/",
+      },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "SEK",
+        availability: "https://schema.org/InStock",
+        url: "https://www.quepasaestocolmo.com/en/cherry-blossoms-stockholm-2026",
+      },
     },
 };
 
