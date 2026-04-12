@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: "When do cherry blossoms bloom in Stockholm in 2026?",
     answer:
-      "In 2026, Stockholm's cherry blossoms typically bloom between mid-April and early May. The first buds usually appear in the second week of April, with peak bloom around April 20th. The display lasts approximately two weeks.",
+      "In 2026, Stockholm&apos;s cherry blossoms typically bloom between mid-April and early May. The first buds usually appear in the second week of April, with peak bloom around April 20th. The display lasts approximately two weeks.",
   },
   {
     question: "Where is the best place to see cherry blossoms in Stockholm?",
@@ -206,19 +206,19 @@ export default function CherryBlossomsStockholm() {
             borderRadius: "0 12px 12px 0", padding: "18px 22px", marginBottom: "36px"
           }}>
             <p style={{ margin: 0, fontSize: "16px", fontWeight: 500, lineHeight: 1.7 }}>
-              <strong>Quick answer:</strong> Stockholm's cherry blossoms peak between mid-April and early May 2026. The best spot is <strong>Kungsträdgården</strong> in the city centre. To avoid crowds, locals head to <strong>Lumaparken</strong> and <strong>Bysistorget</strong>. There's a free Japanese festival on April 28th. The bloom lasts roughly two weeks.
+              <strong>Quick answer:</strong> Stockholm&apos;s cherry blossoms peak between mid-April and early May 2026. The best spot is <strong>Kungsträdgården</strong> in the city centre. To avoid crowds, locals head to <strong>Lumaparken</strong> and <strong>Bysistorget</strong>. There&apos;s a free Japanese festival on April 28th. The bloom lasts roughly two weeks.
             </p>
           </div>
 
           {/* Intro */}
           <p style={{ fontSize: "19px", lineHeight: 1.75, marginBottom: "16px", fontWeight: 400 }}>
-            Stockholm doesn't do spring halfway. After months of grey skies and below-zero temperatures, the city transforms almost overnight when the cherry trees bloom — and the result is genuinely breathtaking.
+            Stockholm doesn&apos;t do spring halfway. After months of grey skies and below-zero temperatures, the city transforms almost overnight when the cherry trees bloom — and the result is genuinely breathtaking.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            If you're planning a trip to Stockholm in April 2026, timing your visit around the cherry blossoms is one of the best decisions you can make. Last year, the trees at Kungsträdgården were in full bloom by April 12th — use that as your reference point.
+            If you&apos;re planning a trip to Stockholm in April 2026, timing your visit around the cherry blossoms is one of the best decisions you can make. Last year, the trees at Kungsträdgården were in full bloom by April 12th — use that as your reference point.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "40px", color: "#333" }}>
-            This guide is written by locals. We've been covering Stockholm for years and we track the bloom every spring in real time — so you get accurate, on-the-ground information, not a recycled travel blog post.
+            This guide is written by locals. We&apos;ve been covering Stockholm for years and we track the bloom every spring in real time — so you get accurate, on-the-ground information, not a recycled travel blog post.
           </p>
 
           {/* When */}
@@ -234,7 +234,7 @@ export default function CherryBlossomsStockholm() {
             {" "}exact timing varies each year based on winter and spring temperatures.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "40px", color: "#333" }}>
-            <strong>Practical tip for visitors:</strong> Book your accommodation for the third week of April and be flexible by a few days. Stockholm is very easy to explore — if you arrive and the bloom hasn't peaked yet, you have plenty to do while you wait.
+            <strong>Practical tip for visitors:</strong> Book your accommodation for the third week of April and be flexible by a few days. Stockholm is very easy to explore — if you arrive and the bloom hasn&apos;t peaked yet, you have plenty to do while you wait.
           </p>
 
           {/* Tip box */}
@@ -266,10 +266,10 @@ export default function CherryBlossomsStockholm() {
               <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Kungsträdgården — the unmissable classic</h3>
             </div>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
-              <a href="https://kungstradgarden.stockholm/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Kungsträdgården</a> is Stockholm's cherry blossom ground zero. The park is home to over 60 Japanese cherry trees — a gift from Japan to King Carl XVI Gustaf in 1998 — that form a spectacular pink canopy at peak bloom. It's the most photographed spot in the city during spring, and for good reason.
+              <a href="https://kungstradgarden.stockholm/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Kungsträdgården</a> is Stockholm&apos;s cherry blossom ground zero. The park is home to over 60 Japanese cherry trees — a gift from Japan to King Carl XVI Gustaf in 1998 — that form a spectacular pink canopy at peak bloom. It&apos;s the most photographed spot in the city during spring, and for good reason.
             </p>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
-              On <strong>April 28th</strong>, the park hosts the free Cherry Blossom Day festival — a full day of Japanese culture with Bunraku puppet theatre, traditional music, Geiko Mai dance, and food stalls. It's completely free and open to everyone.
+              On <strong>April 28th</strong>, the park hosts the free Cherry Blossom Day festival — a full day of Japanese culture with Bunraku puppet theatre, traditional music, Geiko Mai dance, and food stalls. It&apos;s completely free and open to everyone.
             </p>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
               <strong>Visiting from outside Stockholm?</strong> Kungsträdgården is right in the city centre, a 10-minute walk from the main train station (Stockholm Central). You can easily combine it with a visit to the Royal Palace and Gamla Stan (Old Town) on the same day.
@@ -307,7 +307,7 @@ export default function CherryBlossomsStockholm() {
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
               <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>3</span>
-              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Lumaparken — Stockholm's best-kept secret</h3>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Lumaparken — Stockholm&apos;s best-kept secret</h3>
             </div>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
               Southeast of the city centre in Hammarby Sjöstad, Lumaparken has around 50 Japanese cherry trees and almost no tourist crowds. If you want photos without strangers in the background, this is your spot. The modern architecture of the surrounding neighbourhood creates a striking contrast with the pink blossoms — very photogenic.
@@ -331,7 +331,7 @@ export default function CherryBlossomsStockholm() {
               </h3>
             </div>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
-              On Djurgården island, <a href="https://rosendalstradgard.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Rosendals Trädgård</a> is a beautiful organic garden that's perfect for a spring afternoon. Pick up freshly baked bread and coffee from their bakery and settle in under the trees for a proper Swedish picnic. One of the most relaxed spots in the city.
+              On Djurgården island, <a href="https://rosendalstradgard.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Rosendals Trädgård</a> is a beautiful organic garden that&apos;s perfect for a spring afternoon. Pick up freshly baked bread and coffee from their bakery and settle in under the trees for a proper Swedish picnic. One of the most relaxed spots in the city.
             </p>
             <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
               <strong style={{ color: "#0f0f0f" }}>Getting there:</strong> Bus 69 to Bellmansro, then a short walk. Also reachable by ferry from Slussen in summer.
@@ -344,7 +344,7 @@ export default function CherryBlossomsStockholm() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px", marginBottom: "56px" }}>
             {[
-              { icon: "📸", text: "Shoot upward from beneath the trees — you'll capture that sky-full-of-petals shot that makes these photos iconic." },
+              { icon: "📸", text: "Shoot upward from beneath the trees — you&apos;ll capture that sky-full-of-petals shot that makes these photos iconic." },
               { icon: "🌅", text: "Golden hour in April is around 7–8pm. The light is soft, warm, and impossible to replicate at midday." },
               { icon: "📅", text: "Go on a weekday — weekend crowds at Kungsträdgården can be intense. A Tuesday morning feels like a completely different place." },
               { icon: "🧥", text: "Layer up — April in Stockholm can swing from 5°C to 15°C in the same day. A light jacket is essential." },
