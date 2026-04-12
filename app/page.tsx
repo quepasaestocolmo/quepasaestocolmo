@@ -1,303 +1,477 @@
-'use client'
-import { useState } from 'react'
+import type { Metadata } from "next";
+import Script from "next/script";
+import Image from "next/image";
 
-export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false)
+export const metadata: Metadata = {
+  title: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir",
+  description:
+    "Guía completa sobre los cerezos en flor en Estocolmo 2026: cuándo florecen, los mejores lugares como Kungsträdgården, Lumaparken y Bysistorget, y tips para sacar las mejores fotos.",
+  openGraph: {
+    title: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir",
+    description:
+      "Guía completa sobre los cerezos en flor en Estocolmo 2026: cuándo florecen, los mejores lugares y tips para sacar las mejores fotos.",
+    url: "https://www.quepasaestocolmo.com/cerezos-estocolmo-2026",
+    siteName: "Qué Pasa Estocolmo",
+    images: [
+      {
+        url: "https://www.quepasaestocolmo.com/cerezos-hero.webp",
+        width: 1200,
+        height: 630,
+        alt: "Cerezos en flor en Estocolmo con la torre del Ayuntamiento al fondo",
+      },
+    ],
+    locale: "es_ES",
+    type: "article",
+  },
+};
 
+const faqItems = [
+  {
+    question: "¿Cuándo florecen los cerezos en Estocolmo en 2026?",
+    answer:
+      "En 2026, los cerezos de Estocolmo florecen normalmente entre mediados de abril y principios de mayo. La segunda semana de abril suelen aparecer los primeros brotes, y para el 20 de abril suelen estar en su punto máximo. El espectáculo dura aproximadamente dos semanas.",
+  },
+  {
+    question: "¿Cuál es el mejor lugar para ver cerezos en Estocolmo?",
+    answer:
+      "El lugar más famoso es Kungsträdgården, en el centro de Estocolmo, donde más de 60 cerezos japoneses forman un dosel de flores rosadas espectacular. Para evitar multitudes, Lumaparken en Hammarby Sjöstad y Bysistorget en Södermalm son las alternativas favoritas de los locales.",
+  },
+  {
+    question: "¿Hay algún festival de cerezos en Estocolmo 2026?",
+    answer:
+      "Sí. El 28 de abril de 2026 se celebra el Día del Cerezo en Flor en Kungsträdgården, un festival gratuito de cultura japonesa con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
+  },
+  {
+    question: "¿Cuánto dura la floración de los cerezos en Estocolmo?",
+    answer:
+      "La floración de los cerezos en Estocolmo dura aproximadamente dos semanas. El período exacto depende del invierno y las temperaturas de primavera, pero generalmente ocurre entre la segunda y la cuarta semana de abril.",
+  },
+  {
+    question: "¿Cómo llegar a Kungsträdgården para ver los cerezos?",
+    answer:
+      "Puedes llegar en metro (línea azul o roja, estación Kungsträdgården) o caminando desde Gamla Stan en unos 10 minutos. La mejor hora para visitarlo es entre semana antes de las 10am para evitar las multitudes.",
+  },
+  {
+    question: "¿Dónde ver cerezos en Estocolmo sin turistas?",
+    answer:
+      "Lumaparken, en Hammarby Sjöstad, tiene unos 50 cerezos japoneses con muy pocas multitudes. Bysistorget, en Hornsgatan (Södermalm), es otro spot tranquilo favorito de los locales, con cafés y restaurantes alrededor.",
+  },
+  {
+    question: "¿Qué temperatura hace en Estocolmo durante la floración de cerezos?",
+    answer:
+      "En abril, las temperaturas en Estocolmo pueden variar entre 5°C y 15°C en el mismo día. Se recomienda llevar capas de ropa para adaptarse a los cambios.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir",
+      description:
+        "Guía completa sobre los cerezos en flor en Estocolmo 2026: cuándo florecen, los mejores lugares y tips para sacar las mejores fotos.",
+      image: "https://www.quepasaestocolmo.com/cerezos-hero.webp",
+      datePublished: "2026-04-01",
+      dateModified: "2026-04-12",
+      author: {
+        "@type": "Organization",
+        name: "Qué Pasa Estocolmo",
+        url: "https://www.quepasaestocolmo.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Qué Pasa Estocolmo",
+        url: "https://www.quepasaestocolmo.com",
+      },
+      inLanguage: "es",
+      url: "https://www.quepasaestocolmo.com/cerezos-estocolmo-2026",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+    {
+      "@type": "Event",
+      name: "Día del Cerezo en Flor en Estocolmo 2026",
+      startDate: "2026-04-28",
+      endDate: "2026-04-28",
+      location: {
+        "@type": "Place",
+        name: "Kungsträdgården",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Estocolmo",
+          addressCountry: "SE",
+        },
+      },
+      description:
+        "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
+      isAccessibleForFree: true,
+      organizer: {
+        "@type": "Organization",
+        name: "Föreningen Japanska Trädgårdssällskapet",
+      },
+    },
+  ],
+};
+
+export default function CerezosPage() {
   return (
-    <main style={{ fontFamily: 'system-ui, sans-serif', margin: 0, padding: 0 }}>
-      <style>{`
-        * { box-sizing: border-box; }
+    <>
+      <Script
+        id="json-ld-cerezos"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-        /* NAV */
-        .nav-links {
-          display: flex;
-          gap: 32px;
-          font-size: 14px;
-          font-weight: 500;
-        }
-        .nav-actions {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-        .nav-hamburger {
-          display: none;
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 4px;
-          flex-direction: column;
-          gap: 5px;
-        }
-        .nav-hamburger span {
-          display: block;
-          width: 24px;
-          height: 2px;
-          background: #6b00da;
-          border-radius: 2px;
-          transition: all 0.2s;
-        }
-        .mobile-menu {
-          display: none;
-          flex-direction: column;
-          background: white;
-          border-top: 1px solid #eee;
-        }
-        .mobile-menu.open {
-          display: flex;
-        }
-        .mobile-menu a {
-          padding: 14px 20px;
-          color: #0f0f0f;
-          text-decoration: none;
-          font-size: 15px;
-          font-weight: 500;
-          border-bottom: 1px solid #f5f5f5;
-        }
-        .mobile-menu-follow {
-          padding: 14px 20px;
-        }
-        .mobile-menu-follow a {
-          background: #6b00da;
-          color: white;
-          padding: 10px 20px;
-          border-radius: 20px;
-          font-size: 13px;
-          font-weight: 600;
-          text-decoration: none;
-          border-bottom: none;
-        }
-
-        /* HERO */
-        .hero {
-          position: relative;
-          height: 90vh;
-          overflow: hidden;
-          width: 100%;
-        }
-
-        /* EDITORIAL GRID */
-        .editorial-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 16px;
-        }
-        .editorial-main {
-          height: 500px;
-        }
-        .editorial-side {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
-        .editorial-side-card {
-          height: 152px;
-        }
-
-        /* GUIDES GRID */
-        .guides-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-          .nav-links { display: none; }
-          .nav-actions { display: none; }
-          .nav-hamburger { display: flex; }
-
-          .hero { height: 70vh; }
-
-          .editorial-grid { grid-template-columns: 1fr; }
-          .editorial-main { height: 300px; }
-          .editorial-side-card { height: 160px; }
-
-          .guides-grid { grid-template-columns: 1fr; }
-        }
-      `}</style>
-
-      {/* BARRA SUPERIOR */}
-      <div style={{ background: '#6b00da', color: 'white', textAlign: 'center', padding: '8px', fontSize: '13px' }}>
-        🌸 Primavera en Estocolmo — Descubre los mejores planes de la temporada
-      </div>
-
-      {/* NAV */}
-      <nav style={{ background: 'white', borderBottom: '1px solid #eee' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 40px' }}>
-          <div style={{ fontWeight: 900, fontSize: '16px', color: '#6b00da', lineHeight: 1.1 }}>
-            <div>¿QUÉ PASA?</div>
-            <div style={{ color: '#FFD600', WebkitTextStroke: '1px #6b00da' }}>ESTOCOLMO</div>
-          </div>
-          <div className="nav-links">
-            <a href="#" style={{ color: '#0f0f0f', textDecoration: 'none' }}>Guías</a>
-            <a href="#" style={{ color: '#0f0f0f', textDecoration: 'none' }}>Eventos</a>
-            <a href="#" style={{ color: '#0f0f0f', textDecoration: 'none' }}>Noticias</a>
-            <a href="#" style={{ color: '#0f0f0f', textDecoration: 'none' }}>Galería</a>
-          </div>
-          <div className="nav-actions">
-            <select style={{ border: '1px solid #eee', borderRadius: '6px', padding: '4px 8px', fontSize: '13px', cursor: 'pointer' }}>
-              <option value="es">🇪🇸 ES</option>
-              <option value="en">🇬🇧 EN</option>
-              <option value="sv">🇸🇪 SV</option>
-            </select>
-            <a href="https://instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" style={{ background: '#6b00da', color: 'white', padding: '8px 20px', borderRadius: '20px', fontSize: '13px', textDecoration: 'none', fontWeight: 600 }}>
+      <main className="min-h-screen bg-white text-[#0f0f0f]">
+        {/* Nav */}
+        <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <a href="/" className="font-bold text-lg tracking-tight">
+            <span style={{ color: "#6b00da" }}>¿QUÉ PASA?</span>
+            <span className="text-[#0f0f0f]">ESTOCOLMO</span>
+          </a>
+          <div className="flex gap-4 text-sm">
+            <a href="/" className="hover:text-[#6b00da] transition-colors">Inicio</a>
+            <a
+              href="https://www.instagram.com/quepasaestocolmoo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#6b00da] transition-colors"
+            >
               Seguirnos
             </a>
           </div>
-          <button
-            className="nav-hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Abrir menú"
-          >
-            <span style={{ transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
-            <span style={{ opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
-          </button>
-        </div>
+        </nav>
 
-        {/* MENÚ MÓVIL */}
-        <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
-          <a href="#" onClick={() => setMenuOpen(false)}>Guías</a>
-          <a href="#" onClick={() => setMenuOpen(false)}>Eventos</a>
-          <a href="#" onClick={() => setMenuOpen(false)}>Noticias</a>
-          <a href="#" onClick={() => setMenuOpen(false)}>Galería</a>
-          <div className="mobile-menu-follow">
-            <a href="https://instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer">
-              Seguirnos en Instagram
-            </a>
+        <article className="max-w-2xl mx-auto px-6 py-10">
+          {/* Hero image */}
+          <div className="rounded-2xl overflow-hidden mb-8">
+            <Image
+              src="/cerezos-hero.webp"
+              alt="Cerezos en flor en Estocolmo con la torre del Ayuntamiento al fondo"
+              width={800}
+              height={450}
+              className="w-full object-cover"
+              priority
+            />
           </div>
-        </div>
-      </nav>
 
-      {/* HERO */}
-      <div className="hero">
-        <img src="/hero.webp .webp" alt="Estocolmo" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.45)' }} />
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 20px' }}>
-          <div style={{ background: '#FFD600', color: '#6b00da', fontSize: '12px', fontWeight: 700, padding: '4px 16px', borderRadius: '20px', marginBottom: '20px', letterSpacing: '0.1em' }}>
-            TU GUÍA DE ESTOCOLMO EN ESPAÑOL
-          </div>
-          <h1 style={{ color: 'white', fontSize: 'clamp(28px, 7vw, 80px)', fontWeight: 900, lineHeight: 1.1, margin: '0 0 20px', maxWidth: '800px' }}>
-            Descubre todo lo que pasa en Estocolmo
+          {/* Category + meta */}
+          <p className="text-sm text-[#6b00da] font-semibold uppercase tracking-wider mb-2">
+            Primavera en Estocolmo
+          </p>
+          <h1 className="text-3xl font-bold leading-tight mb-3">
+            Cerezos en flor en Estocolmo 2026 — dónde verlos y cuándo ir
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '18px', marginBottom: '32px', maxWidth: '500px' }}>
-            Eventos, guías, noticias y los mejores rincones de la ciudad — en tu idioma.
+          <p className="text-sm text-gray-400 mb-6">
+            Abril 2026 · Por Qué Pasa Estocolmo · 6 min de lectura
           </p>
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="#" style={{ background: '#6b00da', color: 'white', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '15px' }}>
-              Explorar guías
-            </a>
-            <a href="#" style={{ background: '#FFD600', color: '#6b00da', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '15px' }}>
-              Ver eventos
-            </a>
-          </div>
-        </div>
-      </div>
 
-      {/* GRID EDITORIAL */}
-      <div style={{ maxWidth: '1200px', margin: '60px auto', padding: '0 24px' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: 900, marginBottom: '24px', color: '#0f0f0f' }}>
-          Lo mejor de Estocolmo
-        </h2>
-        <div className="editorial-grid">
-          <div className="editorial-main" style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', cursor: 'pointer' }}>
-            <img src="/gamla-stan.webp.webp" alt="Gamla Stan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(107,0,218,0.85) 0%, transparent 60%)' }} />
-            <div style={{ position: 'absolute', bottom: 0, padding: '24px' }}>
-              <span style={{ background: '#6b00da', color: 'white', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '20px', letterSpacing: '0.08em' }}>GUÍAS</span>
-              <h3 style={{ color: 'white', fontSize: '24px', fontWeight: 900, margin: '12px 0 8px', lineHeight: 1.2 }}>
-                Gamla Stan en un día — el itinerario perfecto
-              </h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', margin: 0 }}>Por Qué Pasa Estocolmo · 5 min de lectura</p>
-            </div>
+          {/* ✅ PÁRRAFO CÁPSULA — respuesta directa para IA */}
+          <div className="bg-purple-50 border-l-4 border-[#6b00da] rounded-r-xl p-5 mb-8">
+            <p className="text-base font-medium text-[#0f0f0f] leading-relaxed">
+              <strong>Resumen rápido:</strong> Los cerezos en Estocolmo florecen entre mediados de
+              abril y principios de mayo 2026. El mejor lugar es{" "}
+              <strong>Kungsträdgården</strong>, en el centro. Para evitar
+              multitudes, los locales prefieren <strong>Lumaparken</strong> y{" "}
+              <strong>Bysistorget</strong>. El 28 de abril hay un festival
+              japonés gratuito. La floración dura aproximadamente dos semanas.
+            </p>
           </div>
-          <div className="editorial-side">
-            {[
-              { img: '/stortorget.webp.webp', cat: 'ACTIVIDADES', title: 'Qué hacer en Estocolmo en primavera 2026' },
-              { img: '/ciudad.webp.webp', cat: 'TURISMO', title: 'Los mejores miradores para fotografiar la ciudad' },
-              { img: '/noche.webp.webp', cat: 'NOTICIAS', title: 'El clima en Estocolmo esta semana' },
-            ].map((item, i) => (
-              <div key={i} className="editorial-side-card" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', cursor: 'pointer' }}>
-                <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(107,0,218,0.8) 0%, transparent 60%)' }} />
-                <div style={{ position: 'absolute', bottom: 0, padding: '16px' }}>
-                  <span style={{ background: '#FFD600', color: '#6b00da', fontSize: '10px', fontWeight: 700, padding: '3px 10px', borderRadius: '20px' }}>{item.cat}</span>
-                  <p style={{ color: 'white', fontSize: '14px', fontWeight: 700, margin: '6px 0 0', lineHeight: 1.3 }}>{item.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
-      {/* ÚLTIMAS GUÍAS */}
-      <div style={{ background: '#f9f9f9', padding: '60px 24px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
-            <h2 style={{ fontSize: '28px', fontWeight: 900, color: '#0f0f0f', margin: 0 }}>Últimas guías</h2>
-            <a href="#" style={{ color: '#6b00da', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Ver todas →</a>
-          </div>
-          <div className="guides-grid">
-            {[
-              { img: '/gamla-stan.webp.webp', cat: 'Guías & Tips', title: 'Cómo moverse en Estocolmo — metro y la tarjeta SL' },
-              { img: '/stortorget.webp.webp', cat: 'Actividades', title: 'Estocolmo con poco presupuesto — qué hacer gratis' },
-              { img: '/ciudad.webp.webp', cat: 'Turismo', title: 'Las mejores playas cerca de Estocolmo en verano' },
-              { img: '/noche.webp.webp', cat: 'Cultura', title: 'Södermalm para turistas — cafés y miradores' },
-            ].map((item, i) => (
-              <div key={i} style={{ background: 'white', borderRadius: '12px', overflow: 'hidden', cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
-                <div style={{ position: 'relative', height: '180px' }}>
-                  <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <span style={{ position: 'absolute', top: '12px', left: '12px', background: 'white', color: '#6b00da', fontSize: '10px', fontWeight: 700, padding: '4px 10px', borderRadius: '20px' }}>{item.cat}</span>
-                </div>
-                <div style={{ padding: '16px' }}>
-                  <p style={{ fontWeight: 700, fontSize: '14px', lineHeight: 1.4, margin: '0 0 8px', color: '#0f0f0f' }}>{item.title}</p>
-                  <p style={{ color: '#999', fontSize: '12px', margin: 0 }}>Qué Pasa Estocolmo</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+          {/* Intro */}
+          <p className="text-base leading-relaxed mb-4">
+            Si vives en Estocolmo sabes que hay un momento del año que lo cambia
+            todo. Es cuando florecen los cerezos y la ciudad entera despierta de
+            golpe después del invierno. Dura poco — a veces solo dos semanas —
+            pero es absolutamente mágico.
+          </p>
+          <p className="text-base leading-relaxed mb-8">
+            El año pasado los cerezos de Kungsträdgården ya estaban en plena
+            floración el 12 de abril. Así que si estás planificando tu visita,
+            esa es tu fecha de referencia.
+          </p>
 
-      {/* CTA INSTAGRAM */}
-      <div style={{ background: '#6b00da', padding: '60px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <div style={{ fontSize: '40px', marginBottom: '16px' }}>📸</div>
-          <h2 style={{ color: 'white', fontSize: '32px', fontWeight: 900, margin: '0 0 12px' }}>
-            Síguenos en Instagram
+          {/* Cuándo */}
+          <h2 className="text-2xl font-bold mb-3">
+            ¿Cuándo florecen los cerezos en Estocolmo 2026?
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', marginBottom: '28px' }}>
-            +35,000 seguidores ya descubren Estocolmo con nosotros cada día
+          <p className="text-base leading-relaxed mb-4">
+            La floración ocurre normalmente entre mediados de abril y principios
+            de mayo, dependiendo del invierno. En un año normal, la segunda
+            semana de abril ya aparecen los primeros brotes y para el 20 de
+            abril suelen estar en su punto máximo.
           </p>
-          <a href="https://instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" style={{ background: '#FFD600', color: '#6b00da', padding: '14px 36px', borderRadius: '8px', fontWeight: 900, textDecoration: 'none', fontSize: '16px' }}>
-            @quepasaestocolmoo
-          </a>
-        </div>
-      </div>
+          <p className="text-base leading-relaxed mb-4">
+            El espectáculo dura aproximadamente dos semanas — así que si puedes
+            elegir cuándo viajar, apunta a la tercera semana de abril.
+          </p>
+          <p className="text-sm text-gray-500 mb-2">
+            Fuente de referencia:{" "}
+            <a
+              href="https://visitstockholm.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6b00da] underline hover:opacity-80"
+            >
+              Visit Stockholm
+            </a>{" "}
+            publica actualizaciones anuales sobre la floración.
+          </p>
 
-      {/* FOOTER */}
-      <footer style={{ background: '#0f0f0f', color: 'white', padding: '40px 24px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px' }}>
-            <div>
-              <div style={{ fontWeight: 900, fontSize: '16px', color: '#6b00da', lineHeight: 1.1, marginBottom: '8px' }}>
-                <div>¿QUÉ PASA?</div>
-                <div style={{ color: '#FFD600' }}>ESTOCOLMO</div>
-              </div>
-              <p style={{ color: '#666', fontSize: '13px', margin: 0 }}>Tu guía de Estocolmo en español © 2026</p>
-            </div>
-            <div style={{ display: 'flex', gap: '20px', fontSize: '13px', flexWrap: 'wrap' }}>
-              <a href="https://instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600 }}>Instagram</a>
-              <a href="https://www.tiktok.com/@quepasaestocolmo" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600 }}>TikTok</a>
-              <a href="https://www.facebook.com/quepasaestocolmo" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600 }}>Facebook</a>
-              <a href="https://www.youtube.com/@quepasaestocolmo" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600 }}>YouTube</a>
-            </div>
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-10">
+            <p className="text-sm">
+              📍 <strong>Tip local:</strong> sigue nuestra cuenta{" "}
+              <a
+                href="https://www.instagram.com/quepasaestocolmoo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6b00da] underline"
+              >
+                @quepasaestocolmoo
+              </a>{" "}
+              — publicamos actualizaciones en tiempo real sobre el estado de la
+              floración cada primavera.
+            </p>
           </div>
-        </div>
-      </footer>
 
-    </main>
-  )
+          {/* Lugares */}
+          <h2 className="text-2xl font-bold mb-6">
+            Los mejores lugares para ver cerezos en Estocolmo
+          </h2>
+
+          {/* Lugar 1 */}
+          <div className="mb-10">
+            <div className="rounded-2xl overflow-hidden mb-4">
+              <Image
+                src="/kungstradgardenapoyo.webp"
+
+
+                alt="Dosel de cerezos en Kungsträdgården con gente disfrutando la primavera"
+                width={800}
+                height={450}
+                className="w-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-2">
+              1. Kungsträdgården — el clásico imprescindible
+            </h3>
+            <p className="text-base leading-relaxed mb-3">
+              El{" "}
+              <a
+                href="https://kungstradgarden.stockholm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6b00da] underline"
+              >
+                Kungsträdgården
+              </a>{" "}
+              alberga más de 60 cerezos, un regalo de Japón al rey Carl XVI
+              Gustaf en 1998. En su punto máximo forman un dosel de flores
+              rosadas espectacular. Es el epicentro de la floración en Estocolmo
+              y el lugar más fotografiado de la ciudad en primavera.
+            </p>
+            <p className="text-base leading-relaxed mb-3">
+              El <strong>28 de abril</strong> se celebra el Día del Cerezo en
+              Flor, un festival de cultura japonesa con teatro Bunraku, música
+              tradicional, danzas Geiko Mai y puestos de comida y artesanía —
+              todo gratuito.
+            </p>
+            <div className="rounded-2xl overflow-hidden mb-3">
+              <Image
+                src="/kungstradgardenapoyo2.webp"
+                alt="Luz del atardecer atravesando los cerezos en Kungsträdgården"
+                width={800}
+                height={450}
+                className="w-full object-cover"
+              />
+            </div>
+            <p className="text-sm text-gray-500">
+              <strong>Cómo llegar:</strong> Metro línea azul o roja, estación
+              Kungsträdgården. También caminando desde Gamla Stan en 10 minutos.{" "}
+              <strong>Mejor hora:</strong> Entre semana antes de las 10am.
+            </p>
+          </div>
+
+          {/* Lugar 2 */}
+          <div className="mb-10">
+            <div className="rounded-2xl overflow-hidden mb-4">
+              <Image
+                src="/cerezos-bysistorget.webp"
+                alt="Cerezos en flor en Bysistorget, Södermalm"
+                width={800}
+                height={450}
+                className="w-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-2">
+              2. Bysistorget — el secreto de los locales
+            </h3>
+            <p className="text-base leading-relaxed mb-2">
+              Esta pequeña plaza en Hornsgatan tiene varios cerezos de estilo
+              bonsai que florecen vibrantes en primavera, rodeada de cafés,
+              restaurantes y tiendas de diseño. Es el spot que los locales
+              eligen cuando quieren evitar las multitudes de Kungsträdgården.
+              Más tranquilo, más auténtico y con el café Melvqist justo al lado
+              para un fika perfecto bajo los cerezos.
+            </p>
+            <p className="text-sm text-gray-500">
+              <strong>Cómo llegar:</strong> Metro Slussen, luego caminando hacia
+              Hornsgatan.
+            </p>
+          </div>
+
+          {/* Lugar 3 */}
+          <div className="mb-10">
+            <div className="rounded-2xl overflow-hidden mb-4">
+              <Image
+                src="/cerezos-lumaparken.webp"
+                alt="Túnel de cerezos en Lumaparken, Hammarby Sjöstad"
+                width={800}
+                height={450}
+                className="w-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-2">
+              3. Lumaparken — el secreto mejor guardado
+            </h3>
+            <p className="text-base leading-relaxed mb-2">
+              En Lumaparken, al sureste del centro en Hammarby Sjöstad,
+              encontrarás unos 50 cerezos japoneses sin ninguna de las
+              multitudes de Kungsträdgården. Si quieres hacer fotos tranquilo
+              sin turistas de fondo, este es tu lugar. El barrio tiene además
+              una arquitectura moderna muy fotogénica que contrasta perfecto con
+              las flores rosas.
+            </p>
+            <p className="text-sm text-gray-500">
+              <strong>Cómo llegar:</strong> Tranvía 22 hasta Lumaparken.
+            </p>
+          </div>
+
+          {/* Lugar 4 */}
+          <div className="mb-10">
+            <div className="rounded-2xl overflow-hidden mb-4">
+              <Image
+                src="/cerezos-rosendals.webp"
+                alt="Picnic en Rosendals Trädgård en primavera"
+                width={800}
+                height={450}
+                className="w-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-2">
+              4. Rosendals Trädgård — cerezos con picnic incluido
+            </h3>
+            <p className="text-base leading-relaxed mb-2">
+              <a
+                href="https://rosendalstradgard.se"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6b00da] underline"
+              >
+                Rosendals Trädgård
+              </a>{" "}
+              es un jardín encantador perfecto para picnics en primavera. Tienen
+              una panadería orgánica donde puedes comprar pan recién hecho y
+              café para completar el plan perfecto bajo los árboles.
+            </p>
+            <p className="text-sm text-gray-500">
+              <strong>Cómo llegar:</strong> Bus 69 hasta Bellmansro, luego
+              caminando.
+            </p>
+          </div>
+
+          {/* Tips fotos */}
+          <h2 className="text-2xl font-bold mb-4">
+            Tips para sacar las mejores fotos de los cerezos
+          </h2>
+          <ul className="space-y-3 mb-10 text-base leading-relaxed">
+            <li>
+              📸 Apunta la cámara hacia arriba desde debajo de los cerezos —
+              conseguirás esa foto con el cielo cubierto de pétalos.
+            </li>
+            <li>
+              🌅 Hora dorada en abril: alrededor de las 7–8pm. La luz es
+              perfecta y los cerezos brillan de una manera imposible de replicar
+              al mediodía.
+            </li>
+            <li>
+              📅 Ve entre semana — los fines de semana Kungsträdgården se llena.
+              Entre semana por la mañana es otra experiencia.
+            </li>
+            <li>
+              🧥 Lleva capas — en abril las temperaturas pueden ir de 5°C a 15°C
+              en el mismo día.
+            </li>
+          </ul>
+
+          {/* ✅ FAQ SECTION — clave para GEO */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-6">
+              Preguntas frecuentes sobre los cerezos en Estocolmo 2026
+            </h2>
+            <div className="space-y-5">
+              {faqItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="border border-gray-100 rounded-xl p-5 bg-gray-50"
+                >
+                  <h3 className="font-semibold text-base mb-2">
+                    {item.question}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA */}
+          <div className="bg-[#6b00da] text-white rounded-2xl p-6 text-center mb-10">
+            <h3 className="text-lg font-bold mb-2">
+              ¿Quieres saber exactamente cuándo florecen este año?
+            </h3>
+            <p className="text-sm mb-4 opacity-90">
+              Publicamos actualizaciones en tiempo real cada primavera. No te
+              pierdas el momento perfecto.
+            </p>
+            <a
+              href="https://www.instagram.com/quepasaestocolmoo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-[#6b00da] font-bold px-6 py-2 rounded-full text-sm hover:opacity-90 transition-opacity"
+            >
+              Seguir @quepasaestocolmoo
+            </a>
+          </div>
+        </article>
+
+        {/* Footer */}
+        <footer className="border-t border-gray-100 py-8 px-6 text-center">
+          <p className="font-bold text-base mb-1">
+            <span style={{ color: "#6b00da" }}>¿QUÉ PASA?</span> ESTOCOLMO
+          </p>
+          <p className="text-xs text-gray-400 mb-4">
+            © 2026 Qué Pasa Estocolmo. Todos los derechos reservados.
+          </p>
+          <div className="flex justify-center gap-4 text-sm text-[#6b00da]">
+            <a href="https://www.instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@quepasaestocolmo" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://www.facebook.com/quepasaestocolmo" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.youtube.com/@quepasaestocolmo" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+        </footer>
+      </main>
+    </>
+  );
 }
