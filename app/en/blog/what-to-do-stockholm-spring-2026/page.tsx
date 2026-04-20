@@ -150,12 +150,14 @@ export default function WhatToDoStockholmSpring2026() {
         }}>
           <Link href="/" style={{ textDecoration: "none", color: "#0f0f0f" }}>
             <div style={{ fontWeight: 900, fontSize: "15px", lineHeight: 1.1 }}>
-              QUE PASA?
+              ¿QUÉ PASA?
               <span style={{ display: "block", color: "#6b00da", fontSize: "15px" }}>ESTOCOLMO</span>
             </div>
           </Link>
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
             <Link href="/" style={{ fontSize: "14px", color: "#0f0f0f", textDecoration: "none" }}>Home</Link>
+            <Link href="/blog/que-hacer-estocolmo-primavera-2026" style={{ fontSize: "14px", color: "#0f0f0f", textDecoration: "none" }}>🇪🇸 ES</Link>
+            <Link href="/en/blog/what-to-do-stockholm-spring-2026" style={{ fontSize: "14px", color: "#6b00da", fontWeight: 700, textDecoration: "none" }}>🇬🇧 EN</Link>
             <Link
               href="https://www.instagram.com/quepasaestocolmoo"
               target="_blank"
