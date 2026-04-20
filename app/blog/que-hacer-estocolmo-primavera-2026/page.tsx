@@ -340,16 +340,16 @@ export default function PrimaveraEstocolmo2026() {
               <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Subirse al Ocean Bus — el autobús anfibio</h3>
             </div>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
-              El <a href="https://www.stromma.com/es-es/estocolmo/excursiones/excursiones-en-autobus/ocean-bus/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Ocean Bus</a> es uno de los planes más originales de Estocolmo y en primavera es especialmente espectacular. Es un autobús anfibio que empieza el recorrido por las calles de la ciudad y de repente se lanza al agua — literalmente entra al canal y se convierte en barco. La cara de la gente en ese momento no tiene precio.
+              El <a href="https://oceanbus.se/en/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Ocean Bus</a> es uno de los planes más originales de Estocolmo y en primavera es especialmente espectacular. Es un autobús anfibio que empieza el recorrido por las calles de la ciudad y de repente se lanza al agua — literalmente entra al canal y se convierte en barco. La cara de la gente en ese momento no tiene precio.
             </p>
             <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
-              El recorrido dura unos 50 minutos y combina las mejores vistas de la ciudad tanto desde tierra como desde el agua. Es perfecto para hacer con familia, amigos o en pareja. En primavera la luz es increíble y las fotos desde el agua con la ciudad de fondo son de otro nivel. Reserva con antelación porque se agota rápido.
+              El recorrido dura unos 60 minutos y combina las mejores vistas de la ciudad tanto desde tierra como desde el agua. Es perfecto para hacer con familia, amigos o en pareja. En primavera la luz es increíble y las fotos desde el agua con la ciudad de fondo son de otro nivel. Reserva con antelación porque se agota rápido.
             </p>
             <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
               <Image src="/Oceanbus.webp" alt="Vista desde el Ocean Bus navegando por los canales de Estocolmo" fill style={{ objectFit: "cover" }} />
             </div>
             <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
-              <strong style={{ color: "#0f0f0f" }}>Punto de salida:</strong> Strömkajen, frente al Gran Hôtel. <strong style={{ color: "#0f0f0f" }}>Duración:</strong> aprox. 50 minutos. <strong style={{ color: "#0f0f0f" }}>Precio:</strong> desde 295 SEK adultos. Reserva en stromma.com.
+              <strong style={{ color: "#0f0f0f" }}>Punto de salida:</strong> Strömgatan 10, junto a la Royal Opera. <strong style={{ color: "#0f0f0f" }}>Duración:</strong> aprox. 60 minutos. <strong style={{ color: "#0f0f0f" }}>Precio:</strong> 325 SEK adultos / 270 SEK niños. Reserva en oceanbus.se.
             </div>
           </div>
 
