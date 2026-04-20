@@ -1,577 +1,488 @@
-// app/blog/que-hacer-estocolmo-primavera-2026/page.tsx
-import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Qué hacer en Estocolmo en primavera 2026 | Tu guía definitiva",
+  title: "Qué hacer en Estocolmo en primavera 2026 — guía completa",
   description:
-    "Descubre los mejores planes para visitar Estocolmo en primavera 2026: parques florecidos, festivales, barrios que explorar y consejos de un local. ¡Guía completa para hispanohablantes!",
-  keywords: [
-    "qué hacer en Estocolmo en primavera",
-    "Estocolmo primavera 2026",
-    "visitar Estocolmo primavera",
-    "turismo Estocolmo 2026",
-    "planes Estocolmo mayo",
-    "Estocolmo en abril",
-    "guía Estocolmo español",
-  ],
+    "Los mejores planes en Estocolmo esta primavera 2026: festivales, parques en flor, mercados y actividades imprescindibles. Guía de un local para aprovechar la ciudad al máximo.",
   openGraph: {
-    title: "Qué hacer en Estocolmo en primavera 2026",
+    title: "Qué hacer en Estocolmo en primavera 2026 — guía completa",
     description:
-      "La guía más completa en español para disfrutar Estocolmo en primavera. Actividades, eventos, barrios y consejos de alguien que vive aquí.",
-    url: "https://quepasaestocolmo.com/blog/que-hacer-estocolmo-primavera-2026",
-    siteName: "¿Qué Pasa Estocolmo?",
-    locale: "es_ES",
-    type: "article",
+      "Los mejores planes en Estocolmo esta primavera 2026: festivales, parques en flor, mercados y actividades imprescindibles.",
+    url: "https://www.quepasaestocolmo.com/que-hacer-estocolmo-primavera-2026",
+    siteName: "Qué Pasa Estocolmo",
     images: [
       {
-        url: "/og-primavera-2026.jpg",
+        url: "https://www.quepasaestocolmo.com/Skinnarviksberget2.webp",
         width: 1200,
         height: 630,
-        alt: "Estocolmo en primavera con cerezos en flor",
+        alt: "Estocolmo en primavera con canales y flores",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Qué hacer en Estocolmo en primavera 2026",
-    description: "La guía definitiva en español para tu viaje a Estocolmo esta primavera.",
-  },
-  alternates: {
-    canonical: "https://quepasaestocolmo.com/blog/que-hacer-estocolmo-primavera-2026",
+    locale: "es_ES",
+    type: "article",
   },
 };
+
+const faqItems = [
+  {
+    question: "¿Cuándo empieza la primavera en Estocolmo en 2026?",
+    answer:
+      "La primavera en Estocolmo llega de forma gradual. En marzo los días se alargan notablemente, pero es en abril cuando la ciudad realmente despierta. Las temperaturas suben entre 8°C y 15°C, los parques se llenan de flores y la gente sale masivamente a la calle. Mayo ya es prácticamente verano.",
+  },
+  {
+    question: "¿Qué festivales hay en Estocolmo en primavera 2026?",
+    answer:
+      "En primavera 2026 destacan el Día del Cerezo en Flor en Kungsträdgården (28 de abril), Valborg el 30 de abril — la fiesta de bienvenida al verano — y el inicio de la temporada de conciertos al aire libre en Skansen. Consulta el programa actualizado en visitstockholm.com.",
+  },
+  {
+    question: "¿Qué ropa llevar a Estocolmo en primavera?",
+    answer:
+      "En abril las temperaturas pueden variar entre 5°C y 15°C en el mismo día. Lo mejor es ir en capas: una camiseta, un jersey y una chaqueta ligera. En mayo ya puedes salir con menos ropa, aunque los días de lluvia siguen siendo frecuentes. Lleva siempre un paraguas pequeño.",
+  },
+  {
+    question: "¿Cuáles son los mejores parques de Estocolmo en primavera?",
+    answer:
+      "Los mejores parques para visitar en primavera son Kungsträdgården (cerezos en flor en abril), Djurgården (animales, museos y naturaleza), Hagaparken (tulipanes y paseos junto al lago) y Skinnarviksberget en Södermalm para las mejores vistas de la ciudad al atardecer.",
+  },
+  {
+    question: "¿Qué es Valborg y cómo se celebra en Estocolmo?",
+    answer:
+      "Valborg (30 de abril) es la fiesta tradicional sueca de bienvenida al verano. En Estocolmo la celebración más famosa es en Evert Taubes terrass en Riddarholmen, donde miles de personas se reúnen a cantar canciones de primavera. También hay celebraciones en Skansen y en los campus universitarios. Es uno de los días más animados del año en la ciudad.",
+  },
+  {
+    question: "¿Vale la pena visitar Estocolmo en primavera?",
+    answer:
+      "Sí, absolutamente. La primavera es una de las mejores épocas para visitar Estocolmo. Hay menos turistas que en verano, los precios de los hoteles son más bajos, los días se alargan rápidamente y la ciudad está especialmente bonita con los cerezos en flor y los suecos celebrando el fin del invierno en parques y terrazas.",
+  },
+  {
+    question: "¿Cuánto cuesta visitar Estocolmo en primavera 2026?",
+    answer:
+      "Estocolmo es cara, pero la primavera es temporada media con precios más bajos que en verano. Un hotel céntrico puede costar entre 100 y 200€ por noche. La mayoría de parques, mercados y festivales de primavera son gratuitos. La Stockholm Card (desde 699 SEK/día) incluye transporte público y entrada a más de 60 museos.",
+  },
+  {
+    question: "¿Qué museos abren en primavera en Estocolmo?",
+    answer:
+      "Todos los grandes museos están abiertos en primavera: el Vasa (barco vikingo del siglo XVII), el ABBA Museum, el Fotografiska, el Moderna Museet y el Skansen al aire libre. En primavera además amplían sus horarios y muchos organizan actividades especiales. La mayoría son gratuitos con la Stockholm Card.",
+  },
+];
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Qué hacer en Estocolmo en primavera 2026",
-  description:
-    "Guía completa en español con los mejores planes, actividades y eventos para visitar Estocolmo en primavera 2026.",
-  image: "https://quepasaestocolmo.com/og-primavera-2026.jpg",
-  author: {
-    "@type": "Person",
-    name: "Luis Granobles",
-    url: "https://www.instagram.com/quepasaestocolmoo",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "¿Qué Pasa Estocolmo?",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://quepasaestocolmo.com/logo.png",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "Qué hacer en Estocolmo en primavera 2026 — guía completa",
+      description:
+        "Los mejores planes en Estocolmo esta primavera 2026: festivales, parques en flor, mercados y actividades imprescindibles.",
+      image: "https://www.quepasaestocolmo.com/Skinnarviksberget2.webp",
+      datePublished: "2026-04-01",
+      dateModified: "2026-04-17",
+      author: {
+        "@type": "Organization",
+        name: "Qué Pasa Estocolmo",
+        url: "https://www.quepasaestocolmo.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Qué Pasa Estocolmo",
+        url: "https://www.quepasaestocolmo.com",
+      },
+      inLanguage: "es",
+      url: "https://www.quepasaestocolmo.com/que-hacer-estocolmo-primavera-2026",
     },
-  },
-  datePublished: "2026-03-01",
-  dateModified: "2026-03-01",
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": "https://quepasaestocolmo.com/blog/que-hacer-estocolmo-primavera-2026",
-  },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+    {
+      "@type": "Event",
+      name: "Valborg 2026 en Estocolmo",
+      startDate: "2026-04-30",
+      endDate: "2026-04-30",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: "Evert Taubes terrass, Riddarholmen",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Estocolmo",
+          addressCountry: "SE",
+        },
+      },
+      description:
+        "Celebración tradicional sueca de bienvenida al verano con canciones de primavera, reuniones masivas en parques y festividades en toda la ciudad.",
+      isAccessibleForFree: true,
+      organizer: {
+        "@type": "Organization",
+        name: "Visit Stockholm",
+        url: "https://visitstockholm.com",
+      },
+    },
+  ],
 };
-
-interface SectionProps {
-  id: string;
-  number: string;
-  title: string;
-  children: React.ReactNode;
-}
-
-interface TipBoxProps {
-  emoji: string;
-  title: string;
-  children: React.ReactNode;
-}
-
-interface HighlightCardProps {
-  emoji: string;
-  title: string;
-  description: string;
-  tag?: string;
-}
-
-function Section({ id, number, title, children }: SectionProps) {
-  return (
-    <section id={id} className="article-section">
-      <div className="section-header">
-        <span className="section-number">{number}</span>
-        <h2>{title}</h2>
-      </div>
-      {children}
-    </section>
-  );
-}
-
-function TipBox({ emoji, title, children }: TipBoxProps) {
-  return (
-    <aside className="tip-box">
-      <div className="tip-header">
-        <span className="tip-emoji">{emoji}</span>
-        <strong>{title}</strong>
-      </div>
-      <div className="tip-body">{children}</div>
-    </aside>
-  );
-}
-
-function HighlightCard({ emoji, title, description, tag }: HighlightCardProps) {
-  return (
-    <div className="highlight-card">
-      {tag && <span className="card-tag">{tag}</span>}
-      <span className="card-emoji">{emoji}</span>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
-}
-
-const tocItems = [
-  { href: "#por-que-primavera", label: "¿Por qué visitar en primavera?" },
-  { href: "#parques-naturaleza", label: "Parques y naturaleza" },
-  { href: "#barrios-explorar", label: "Barrios que explorar" },
-  { href: "#eventos-festivales", label: "Eventos y festivales" },
-  { href: "#gastronomia", label: "Gastronomía de temporada" },
-  { href: "#actividades-agua", label: "Actividades en el agua" },
-  { href: "#consejos-practicos", label: "Consejos prácticos" },
-];
 
 export default function PrimaveraEstocolmo2026() {
   return (
     <>
-      <script
+      <Script
+        id="json-ld-primavera"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="article-wrapper">
+      <main style={{ backgroundColor: "#ffffff", color: "#0f0f0f", fontFamily: "system-ui, -apple-system, sans-serif" }}>
 
-        <header className="article-hero">
-          <div className="hero-label">
-            <span className="label-tag">✦ Guía de viaje</span>
-            <span className="label-date">Primavera 2026</span>
+        {/* NAV */}
+        <nav style={{
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          padding: "16px 32px", borderBottom: "1px solid #eee", position: "sticky", top: 0,
+          backgroundColor: "#fff", zIndex: 100,
+        }}>
+          <Link href="/" style={{ textDecoration: "none", color: "#0f0f0f" }}>
+            <div style={{ fontWeight: 900, fontSize: "15px", lineHeight: 1.1 }}>
+              ¿QUÉ PASA?
+              <span style={{ display: "block", color: "#6b00da", fontSize: "15px" }}>ESTOCOLMO</span>
+            </div>
+          </Link>
+          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+            <Link href="/" style={{ fontSize: "14px", color: "#0f0f0f", textDecoration: "none" }}>Inicio</Link>
+            <Link
+              href="https://www.instagram.com/quepasaestocolmoo"
+              target="_blank"
+              style={{
+                backgroundColor: "#6b00da", color: "#fff", fontSize: "13px", fontWeight: 700,
+                padding: "8px 18px", borderRadius: "8px", textDecoration: "none",
+              }}
+            >
+              Seguirnos
+            </Link>
           </div>
-          <h1>
-            Qué hacer en Estocolmo<br />
-            <span className="title-highlight">en primavera 2026</span>
-          </h1>
-          <p className="hero-subtitle">
-            La ciudad despierta. Los días se alargan. Y yo, que llevo años
-            viviendo aquí, te cuento exactamente qué no te puedes perder.
-          </p>
-          <div className="hero-meta">
-            <div className="author-chip">
-              <div className="author-avatar">L</div>
-              <div>
-                <span className="author-name">Luis · @quepasaestocolmoo</span>
-                <span className="author-sub">Tu guía local en Estocolmo</span>
-              </div>
-            </div>
-            <div className="meta-stats">
-              <span>🕐 10 min de lectura</span>
-              <span>📍 Estocolmo, Suecia</span>
-            </div>
+        </nav>
+
+        {/* HERO */}
+        <div style={{ position: "relative", width: "100%", height: "520px", overflow: "hidden" }}>
+          <Image
+            src="/stockholmhero.webp"
+            alt="Estocolmo en primavera 2026 con canales, flores y cielo despejado"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            priority
+          />
+          <div style={{
+            position: "absolute", inset: 0,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.60) 100%)",
+          }} />
+          <div style={{
+            position: "absolute", bottom: "48px", left: "32px", right: "32px",
+            maxWidth: "760px", margin: "0 auto",
+          }}>
+            <span style={{
+              backgroundColor: "#FFD600", color: "#0f0f0f", fontSize: "11px", fontWeight: 700,
+              padding: "5px 14px", borderRadius: "20px", letterSpacing: "0.08em", textTransform: "uppercase",
+            }}>
+              Primavera en Estocolmo
+            </span>
+            <h1 style={{
+              color: "#fff", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 900,
+              lineHeight: 1.1, marginTop: "14px", marginBottom: 0, letterSpacing: "-0.02em",
+            }}>
+              ¿Qué hacer en Estocolmo en primavera 2026? — guía completa
+            </h1>
           </div>
-          <div className="hero-image-wrapper">
-            <Image
-              src="/primavera-estocolmo-hero.jpg"
-              alt="Vista panorámica de Estocolmo en primavera con cerezos en flor en Kungsträdgården"
-              width={1200}
-              height={600}
-              priority
-              className="hero-image"
-            />
-            <div className="hero-image-caption">
-              Kungsträdgården en plena floración — el momento más fotogénico del año 📸
-            </div>
-          </div>
-        </header>
-
-        <div className="article-body">
-
-          <nav className="toc" aria-label="Tabla de contenidos">
-            <div className="toc-title">📋 En este artículo</div>
-            <ol className="toc-list">
-              {tocItems.map((item) => (
-                <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-
-          <div className="article-intro">
-            <p>
-              Si hay una época del año para visitar Estocolmo, es la primavera.
-              Y no lo digo por decir — lo digo después de haber vivido aquí varios
-              años y ver cómo esta ciudad cambia completamente entre marzo y junio.
-            </p>
-            <p>
-              Los suecos tienen una palabra para describir ese primer día de sol
-              después del largo invierno: <em>vårkänsla</em>. Algo así como la
-              sensación de que la vida vuelve. Y créeme, cuando lo vives en persona,
-              lo entiendes perfectamente.
-            </p>
-            <p>
-              En esta guía te cuento todo lo que necesitas saber para aprovechar
-              al máximo tu viaje a Estocolmo esta primavera 2026. Sin relleno,
-              sin copy-paste de otras webs. Solo lo que yo mismo haría si viniera
-              de visita.
-            </p>
-          </div>
-
-          <Section id="por-que-primavera" number="01" title="¿Por qué visitar Estocolmo en primavera?">
-            <p>
-              Vamos al grano: la primavera es el punto dulce entre el frío invierno
-              y el caótico verano. En verano Estocolmo se llena de turistas y los
-              precios suben. En invierno hay poca luz y mucho frío. La primavera
-              es el secreto mejor guardado.
-            </p>
-            <div className="highlight-grid">
-              <HighlightCard emoji="☀️" title="Días que se alargan" description="En junio llega el sol de medianoche. Pero incluso en abril ya tienes 14+ horas de luz al día. Un lujo para explorar la ciudad." tag="Clima" />
-              <HighlightCard emoji="💸" title="Precios más razonables" description="Antes del pico de verano, hoteles y actividades cuestan bastante menos. El mismo viaje puede salirte un 30-40% más barato." tag="Presupuesto" />
-              <HighlightCard emoji="👥" title="Menos masificación" description="Las atracciones principales como Gamla Stan o el Vasamuseet están cómodas. Nada de colas interminables ni empujones." tag="Experiencia" />
-              <HighlightCard emoji="🌸" title="La naturaleza explota" description="Cerezos, tulipanes, patos con crías... La ciudad se convierte en una postal viviente que dura pocas semanas." tag="Naturaleza" />
-            </div>
-            <TipBox emoji="🌡️" title="¿Cuándo exactamente ir?">
-              <p>
-                <strong>Abril</strong> es fresco (5-12°C) y con mucha floración.{" "}
-                <strong>Mayo</strong> es mi favorito: 12-18°C, sol garantizado la mayoría
-                de días y la ciudad en plena energía. <strong>Junio</strong> ya
-                roza el verano con hasta 22°C. Lleva siempre una chaqueta ligera,
-                Estocolmo cambia rápido.
-              </p>
-            </TipBox>
-          </Section>
-
-          <Section id="parques-naturaleza" number="02" title="Parques y naturaleza que no te puedes saltar">
-            <p>
-              Estocolmo tiene más verde por habitante que casi cualquier otra capital
-              europea. En primavera eso se nota muchísimo. Aquí van mis favoritos:
-            </p>
-            <div className="place-block">
-              <div className="place-image-wrapper">
-                <Image src="/kungstradgarden-cerezos.jpg" alt="Cerezos en flor en Kungsträdgården" width={800} height={450} className="place-image" />
-              </div>
-              <div className="place-content">
-                <h3>🌸 Kungsträdgården — El espectáculo de los cerezos</h3>
-                <p>Cada primavera, los cerezos japoneses florecen y se convierten en el lugar más fotografiado de Estocolmo. El momento exacto varía, pero generalmente es entre finales de abril y principios de mayo. Dura apenas dos semanas — si coincide con tu visita, <strong>no te lo pienses</strong>.</p>
-                <p>El ambiente es increíble: familias, fotógrafos, músicos espontáneos... Es uno de esos momentos donde te das cuenta de por qué esta ciudad es especial.</p>
-                <div className="place-details">
-                  <span>📍 Kungsträdgårdsgatan, Norrmalm</span>
-                  <span>🕐 Abierto 24h · Gratis</span>
-                </div>
-              </div>
-            </div>
-            <div className="place-block reverse">
-              <div className="place-image-wrapper">
-                <Image src="/djurgarden-primavera.jpg" alt="Paseo en bici por Djurgården en primavera" width={800} height={450} className="place-image" />
-              </div>
-              <div className="place-content">
-                <h3>🌳 Djurgården — La isla parque de Estocolmo</h3>
-                <p>Esta isla es el pulmón verde de la ciudad y en primavera se convierte en el lugar de escape favorito de los estocolmenses. Puedes ir andando, en bici o en barco desde Slussen.</p>
-                <p>Aquí también están el <strong>Vasamuseet</strong>, el <strong>ABBA Museum</strong> y el <strong>Skansen</strong>. Pero si el día acompaña, simplemente pasear ya merece la pena.</p>
-                <div className="place-details">
-                  <span>📍 Isla de Djurgården</span>
-                  <span>🚲 Alquiler de bici desde ~150 SEK/hora</span>
-                </div>
-              </div>
-            </div>
-            <TipBox emoji="🦢" title="Dato de local">
-              <p>En primavera, los patos y cisnes del lago Mälaren tienen crías. Es un momento precioso para ver familias de animales mientras tomas un café en alguno de los quioscos del parque.</p>
-            </TipBox>
-            <h3>Más parques que vale la pena visitar:</h3>
-            <ul className="styled-list">
-              <li><strong>Hagaparken</strong> — El parque romántico con el Palacio de Haga y unas vistas espectaculares. Ideal para un picnic.</li>
-              <li><strong>Tantolunden</strong> — En Södermalm, con vistas al lago y mucho ambiente local. Menos turístico, más auténtico.</li>
-              <li><strong>Rålambs­hovs­parken</strong> — En Kungsholmen, junto al agua. Perfecto para ver el atardecer con una cerveza.</li>
-            </ul>
-          </Section>
-
-          <Section id="barrios-explorar" number="03" title="Los barrios que tienes que explorar">
-            <p>Estocolmo tiene personalidades muy distintas según el barrio. En primavera, con el buen tiempo, explorarlos a pie es un placer.</p>
-            <div className="barrio-grid">
-              <div className="barrio-card">
-                <div className="barrio-color" style={{ background: "#6b00da" }} />
-                <h3>🏰 Gamla Stan</h3>
-                <p>El casco histórico medieval. Obligatorio, sí, pero evita las horas centrales del mediodía. Ve por la mañana temprano o al atardecer cuando la luz es mágica y hay menos gente.</p>
-              </div>
-              <div className="barrio-card">
-                <div className="barrio-color" style={{ background: "#FFD600" }} />
-                <h3>🎨 Södermalm</h3>
-                <p>El barrio cool de Estocolmo. Cafés de especialidad, tiendas vintage, restaurantes con onda... y unas vistas desde Monteliusvägen que no tienen precio. Mi favorito.</p>
-              </div>
-              <div className="barrio-card">
-                <div className="barrio-color" style={{ background: "#0f0f0f" }} />
-                <h3>🛍️ Östermalm</h3>
-                <p>El barrio elegante. El Östermalms Saluhall es una parada obligatoria para probar productos suecos de calidad. También hay tiendas de diseño escandinavo.</p>
-              </div>
-              <div className="barrio-card">
-                <div className="barrio-color" style={{ background: "#6b00da" }} />
-                <h3>🌿 Kungsholmen</h3>
-                <p>Menos turístico pero con mucho encanto. El paseo junto al agua es precioso en primavera. El Ayuntamiento de Estocolmo merece una visita guiada.</p>
-              </div>
-            </div>
-            <TipBox emoji="🚶" title="Mi ruta favorita de primavera">
-              <p>Empieza en <strong>Slussen</strong>, sube a Södermalm hasta Monteliusvägen. Baja a Gamla Stan, explora las callejuelas. Cruza a Norrmalm, pasa por Kungsträdgården. Termina con una cerveza en alguna terraza junto al agua. Unas 4-5 horas perfectas.</p>
-            </TipBox>
-          </Section>
-
-          <Section id="eventos-festivales" number="04" title="Eventos y festivales de primavera 2026">
-            <p>La agenda cultural de Estocolmo en primavera es bastante activa. Estos son los eventos que más me interesan para 2026:</p>
-            <div className="event-list">
-              <div className="event-item">
-                <div className="event-date"><span className="event-month">ABR</span><span className="event-day">30</span></div>
-                <div className="event-info">
-                  <h3>Valborg / Walpurgis Night</h3>
-                  <p>La noche de Walpurgis marca la llegada oficial de la primavera en Suecia. Hay hogueras, música en vivo y estudiantes cantando canciones tradicionales. Hagaparken es uno de los mejores lugares para vivirlo.</p>
-                  <span className="event-tag">Tradición sueca · Gratis</span>
-                </div>
-              </div>
-              <div className="event-item">
-                <div className="event-date"><span className="event-month">MAY</span><span className="event-day">01</span></div>
-                <div className="event-info">
-                  <h3>Día del Trabajador</h3>
-                  <p>Día festivo en Suecia con manifestaciones pacíficas y actos culturales. Muchos museos tienen entrada gratuita este día.</p>
-                  <span className="event-tag">Festivo nacional</span>
-                </div>
-              </div>
-              <div className="event-item">
-                <div className="event-date"><span className="event-month">MAY</span><span className="event-day">—</span></div>
-                <div className="event-info">
-                  <h3>Design Week Stockholm</h3>
-                  <p>Una semana dedicada al diseño escandinavo con exposiciones, talleres y showrooms abiertos al público.</p>
-                  <span className="event-tag">Diseño · Cultura</span>
-                </div>
-              </div>
-              <div className="event-item">
-                <div className="event-date"><span className="event-month">JUN</span><span className="event-day">06</span></div>
-                <div className="event-info">
-                  <h3>Día Nacional de Suecia</h3>
-                  <p>Celebraciones en Skansen con música folclórica y trajes tradicionales. Ambiente muy especial.</p>
-                  <span className="event-tag">Festivo nacional · Skansen</span>
-                </div>
-              </div>
-            </div>
-            <TipBox emoji="📅" title="Consejo de planificación">
-              <p>Valborg (30 de abril) y el puente del 1 de mayo suelen llenar los hoteles. Reserva con antelación si viajas esas fechas.</p>
-            </TipBox>
-          </Section>
-
-          <Section id="gastronomia" number="05" title="Gastronomía: qué comer en primavera">
-            <p>La cocina sueca cambia con las estaciones y la primavera trae algunos sabores muy particulares. Aquí lo que tienes que probar:</p>
-            <div className="food-grid">
-              <div className="food-item">
-                <span className="food-emoji">🦐</span>
-                <h3>Räkor (gambas)</h3>
-                <p>Los puestos de gambas cocidas en los muelles empiezan a abrir en primavera. Comer gambas frescas mirando al agua es una experiencia obligatoria.</p>
-              </div>
-              <div className="food-item">
-                <span className="food-emoji">🥐</span>
-                <h3>Semla</h3>
-                <p>Un bollo relleno de crema de almendra y nata que hay que probar al menos una vez. Muchas panaderías los sirven hasta bien entrado marzo.</p>
-              </div>
-              <div className="food-item">
-                <span className="food-emoji">☕</span>
-                <h3>Fika en terraza</h3>
-                <p>En cuanto sale el sol, todas las terrazas de Estocolmo se llenan. Únete al ritual del café sueco, es parte de la experiencia.</p>
-              </div>
-              <div className="food-item">
-                <span className="food-emoji">🌿</span>
-                <h3>Cocina New Nordic</h3>
-                <p>En primavera los restaurantes actualizan sus menús con espárragos silvestres, ortigas y flores comestibles. La mejor época para la alta cocina escandinava.</p>
-              </div>
-            </div>
-            <TipBox emoji="🍽️" title="Mercados recomendados">
-              <p>El <strong>Östermalms Saluhall</strong> es el mercado gourmet por excelencia. Para algo más auténtico, el <strong>Hötorgshallen</strong> en Hötorget mezcla puestos internacionales y suecos.</p>
-            </TipBox>
-          </Section>
-
-          <Section id="actividades-agua" number="06" title="Actividades en el agua">
-            <p>Estocolmo está construida sobre 14 islas y tiene más de 20 km de costa dentro de la ciudad. En primavera, el agua empieza a despertar.</p>
-            <div className="activity-list">
-              <div className="activity-item">
-                <span className="activity-icon">⛵</span>
-                <div>
-                  <h3>Paseo en barco por el Archipiélago</h3>
-                  <p>El archipiélago de Estocolmo tiene más de 30.000 islas. En primavera empiezan los ferrys a las islas más cercanas. Un día a Vaxholm o Sandhamn es una experiencia completamente diferente.</p>
-                </div>
-              </div>
-              <div className="activity-item">
-                <span className="activity-icon">🚣</span>
-                <div>
-                  <h3>Kayak urbano</h3>
-                  <p>Ver Gamla Stan desde el agua en kayak es una perspectiva completamente diferente. En mayo el agua ya está a temperatura razonable.</p>
-                </div>
-              </div>
-              <div className="activity-item">
-                <span className="activity-icon">🚢</span>
-                <div>
-                  <h3>Crucero por los canales</h3>
-                  <p>Hay opciones con audioguía en español y duración de 1-2 horas. Perfectos para orientarte al llegar a la ciudad.</p>
-                </div>
-              </div>
-            </div>
-            <div className="image-full">
-              <Image src="/archipielago-estocolmo-primavera.jpg" alt="Vista del archipiélago de Estocolmo en primavera" width={1100} height={500} className="full-image" />
-              <p className="image-caption">El archipiélago en primavera — una de las escapadas más bonitas desde Estocolmo</p>
-            </div>
-          </Section>
-
-          <Section id="consejos-practicos" number="07" title="Consejos prácticos para tu viaje">
-            <div className="tips-grid">
-              <div className="practical-tip">
-                <span className="tip-icon">🚇</span>
-                <h3>Transporte</h3>
-                <p>El metro (Tunnelbana) cubre bien la ciudad. Compra la tarjeta SL Access. En primavera, ir a pie entre barrios es muy agradable.</p>
-              </div>
-              <div className="practical-tip">
-                <span className="tip-icon">💳</span>
-                <h3>Pagos</h3>
-                <p>Suecia es casi cashless. Lleva una tarjeta sin comisiones internacionales. Revolut y Wise funcionan muy bien.</p>
-              </div>
-              <div className="practical-tip">
-                <span className="tip-icon">🏨</span>
-                <h3>Dónde alojarse</h3>
-                <p><strong>Södermalm</strong> para ambiente local. <strong>Norrmalm</strong> para estar en el centro. Reserva con anticipación para el puente de mayo.</p>
-              </div>
-              <div className="practical-tip">
-                <span className="tip-icon">🌤️</span>
-                <h3>Ropa</h3>
-                <p>Capas, capas y más capas. Por la mañana 5°C y por la tarde 18°C. Una chaqueta impermeable ligera es esencial.</p>
-              </div>
-              <div className="practical-tip">
-                <span className="tip-icon">🗣️</span>
-                <h3>Idioma</h3>
-                <p>Los suecos hablan inglés excelente. Aprende <em>tack</em> (gracias) y <em>hej</em> (hola) — la gente lo agradece mucho.</p>
-              </div>
-              <div className="practical-tip">
-                <span className="tip-icon">📱</span>
-                <h3>Apps útiles</h3>
-                <p><strong>SL</strong> para transporte, <strong>Maps.me</strong> para mapas offline. Y sígueme en <strong>@quepasaestocolmoo</strong> para actualizaciones en tiempo real.</p>
-              </div>
-            </div>
-          </Section>
-
-          <div className="article-closing">
-            <h2>¿Listo para tu primavera en Estocolmo?</h2>
-            <p>Espero que esta guía te haya dado una idea clara de lo que te espera. Estocolmo en primavera es de esas experiencias que repites.</p>
-            <p>Si tienes dudas concretas, escríbeme por Instagram. Leo todos los mensajes.</p>
-            <div className="cta-block">
-              <a href="https://www.instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" className="cta-button">
-                Sígueme en Instagram →
-              </a>
-              <span className="cta-sub">Contenido diario sobre Estocolmo en español</span>
-            </div>
-          </div>
-
         </div>
-      </article>
 
-      <style>{`
-        :root {
-          --purple: #6b00da;
-          --yellow: #FFD600;
-          --white: #ffffff;
-          --text: #0f0f0f;
-          --gray: #f4f4f4;
-          --gray-mid: #e0e0e0;
-          --text-light: #555;
-          --radius: 12px;
-          --radius-sm: 8px;
-        }
-        .article-wrapper { font-family: 'Georgia', serif; color: var(--text); max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
-        .article-hero { padding: 3rem 0 2rem; border-bottom: 2px solid var(--gray-mid); margin-bottom: 2.5rem; }
-        .hero-label { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.25rem; }
-        .label-tag { background: var(--purple); color: var(--white); font-family: sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 100px; }
-        .label-date { font-family: sans-serif; font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
-        h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.1; font-weight: 900; margin: 0 0 1rem; letter-spacing: -0.02em; }
-        .title-highlight { color: var(--purple); }
-        .hero-subtitle { font-size: 1.2rem; color: var(--text-light); line-height: 1.6; margin: 0 0 1.5rem; font-style: italic; }
-        .hero-meta { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .author-chip { display: flex; align-items: center; gap: 0.75rem; }
-        .author-avatar { width: 42px; height: 42px; background: var(--purple); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
-        .author-name { display: block; font-family: sans-serif; font-size: 0.9rem; font-weight: 700; }
-        .author-sub { display: block; font-family: sans-serif; font-size: 0.78rem; color: var(--text-light); }
-        .meta-stats { display: flex; gap: 1rem; font-family: sans-serif; font-size: 0.85rem; color: var(--text-light); }
-        .hero-image-wrapper { border-radius: var(--radius); overflow: hidden; }
-        .hero-image { width: 100%; height: auto; display: block; }
-        .hero-image-caption { background: rgba(0,0,0,0.7); color: var(--white); font-family: sans-serif; font-size: 0.8rem; padding: 0.6rem 1rem; text-align: center; }
-        .toc { background: var(--gray); border-left: 4px solid var(--purple); border-radius: var(--radius-sm); padding: 1.5rem; margin-bottom: 2.5rem; }
-        .toc-title { font-family: sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.85rem; }
-        .toc-list { margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
-        .toc-list a { font-family: sans-serif; font-size: 0.95rem; color: var(--purple); text-decoration: none; }
-        .toc-list a:hover { text-decoration: underline; }
-        .article-intro { margin-bottom: 2.5rem; }
-        .article-intro p { font-size: 1.1rem; line-height: 1.75; margin: 0 0 1rem; }
-        .article-section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--gray-mid); }
-        .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; }
-        .section-number { font-family: sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: var(--white); background: var(--purple); padding: 0.25rem 0.55rem; border-radius: 4px; flex-shrink: 0; }
-        .article-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0; font-weight: 800; }
-        .article-section p { font-size: 1.05rem; line-height: 1.75; margin: 0 0 1.25rem; }
-        .article-section h3 { font-size: 1.2rem; font-weight: 800; margin: 1.5rem 0 0.5rem; }
-        .highlight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .highlight-card { background: var(--gray); border-radius: var(--radius); padding: 1.25rem; }
-        .card-tag { font-family: sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); display: block; margin-bottom: 0.5rem; }
-        .card-emoji { font-size: 1.75rem; display: block; margin-bottom: 0.5rem; }
-        .highlight-card h3 { font-size: 1rem !important; font-weight: 800 !important; margin: 0 0 0.4rem !important; }
-        .highlight-card p { font-size: 0.9rem !important; color: var(--text-light) !important; margin: 0 !important; line-height: 1.5 !important; }
-        .tip-box { background: #fff8e1; border: 2px solid var(--yellow); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-        .tip-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
-        .tip-emoji { font-size: 1.25rem; }
-        .tip-header strong { font-family: sans-serif; font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
-        .tip-body p { font-size: 0.95rem !important; margin: 0 !important; line-height: 1.65 !important; }
-        .place-block { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; margin: 1.5rem 0; }
-        .place-block.reverse { direction: rtl; }
-        .place-block.reverse > * { direction: ltr; }
-        .place-image-wrapper { border-radius: var(--radius); overflow: hidden; }
-        .place-image { width: 100%; height: auto; display: block; }
-        .place-details { display: flex; flex-direction: column; gap: 0.25rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--gray-mid); }
-        .place-details span { font-family: sans-serif; font-size: 0.82rem; color: var(--text-light); }
-        .styled-list { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
-        .styled-list li { font-size: 1rem; line-height: 1.65; }
-        .barrio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .barrio-card { border: 1px solid var(--gray-mid); border-radius: var(--radius); padding: 1.25rem; position: relative; overflow: hidden; }
-        .barrio-color { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        .barrio-card h3 { font-size: 1.05rem !important; margin: 0.25rem 0 0.6rem !important; }
-        .barrio-card p { font-size: 0.9rem !important; color: var(--text-light) !important; margin: 0 !important; line-height: 1.6 !important; }
-        .event-list { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; border: 1px solid var(--gray-mid); border-radius: var(--radius); overflow: hidden; }
-        .event-item { display: flex; gap: 1.25rem; padding: 1.25rem; border-bottom: 1px solid var(--gray-mid); align-items: start; }
-        .event-item:last-child { border-bottom: none; }
-        .event-date { background: var(--purple); color: var(--white); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; text-align: center; flex-shrink: 0; min-width: 52px; }
-        .event-month { display: block; font-family: sans-serif; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
-        .event-day { display: block; font-size: 1.4rem; font-weight: 900; line-height: 1; margin-top: 0.1rem; }
-        .event-info h3 { font-size: 1.05rem !important; margin: 0 0 0.4rem !important; }
-        .event-info p { font-size: 0.9rem !important; color: var(--text-light) !important; margin: 0 0 0.6rem !important; line-height: 1.6 !important; }
-        .event-tag { font-family: sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--purple); background: rgba(107,0,218,0.08); padding: 0.2rem 0.6rem; border-radius: 100px; }
-        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .food-item { background: var(--gray); border-radius: var(--radius); padding: 1.25rem; text-align: center; }
-        .food-emoji { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
-        .food-item h3 { font-size: 1rem !important; margin: 0 0 0.4rem !important; }
-        .food-item p { font-size: 0.88rem !important; color: var(--text-light) !important; margin: 0 !important; line-height: 1.55 !important; }
-        .activity-list { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
-        .activity-item { display: flex; gap: 1rem; align-items: start; background: var(--gray); border-radius: var(--radius); padding: 1.25rem; }
-        .activity-icon { font-size: 2rem; flex-shrink: 0; }
-        .activity-item h3 { font-size: 1.05rem !important; margin: 0 0 0.4rem !important; }
-        .activity-item p { font-size: 0.9rem !important; color: var(--text-light) !important; margin: 0 !important; line-height: 1.6 !important; }
-        .image-full { margin: 2rem 0; border-radius: var(--radius); overflow: hidden; }
-        .full-image { width: 100%; height: auto; display: block; }
-        .image-caption { background: var(--gray); font-family: sans-serif; font-size: 0.82rem; color: var(--text-light); padding: 0.7rem 1rem; text-align: center; margin: 0; font-style: italic; }
-        .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0; }
-        .practical-tip { border: 1px solid var(--gray-mid); border-radius: var(--radius); padding: 1.25rem; }
-        .tip-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
-        .practical-tip h3 { font-size: 1rem !important; margin: 0 0 0.4rem !important; }
-        .practical-tip p { font-size: 0.88rem !important; color: var(--text-light) !important; margin: 0 !important; line-height: 1.6 !important; }
-        .article-closing { background: linear-gradient(135deg, rgba(107,0,218,0.06) 0%, rgba(255,214,0,0.08) 100%); border: 2px solid var(--purple); border-radius: var(--radius); padding: 2.5rem; text-align: center; margin-top: 1rem; }
-        .article-closing h2 { font-size: 1.75rem; margin: 0 0 1rem; font-weight: 800; }
-        .article-closing p { font-size: 1.05rem; line-height: 1.7; color: #333; margin: 0 0 1rem; max-width: 580px; margin-inline: auto; }
-        .cta-block { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; margin-top: 1.5rem; }
-        .cta-button { display: inline-block; background: var(--purple); color: var(--white); font-family: sans-serif; font-weight: 800; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 100px; text-decoration: none; box-shadow: 0 4px 20px rgba(107,0,218,0.3); }
-        .cta-sub { font-family: sans-serif; font-size: 0.82rem; color: var(--text-light); }
-        @media (max-width: 680px) {
-          .place-block, .place-block.reverse { grid-template-columns: 1fr; direction: ltr; }
-          .hero-meta { flex-direction: column; gap: 0.75rem; }
-        }
-      `}</style>
+        {/* ARTÍCULO */}
+        <article style={{ maxWidth: "760px", margin: "0 auto", padding: "48px 24px 80px" }}>
+
+          {/* META */}
+          <div style={{
+            display: "flex", gap: "10px", alignItems: "center", fontSize: "13px",
+            color: "#888", marginBottom: "32px", flexWrap: "wrap",
+          }}>
+            <span>Abril 2026</span>
+            <span style={{ color: "#FFD600", fontWeight: 700, fontSize: "18px" }}>·</span>
+            <span>Por Qué Pasa Estocolmo</span>
+            <span style={{ color: "#FFD600", fontWeight: 700, fontSize: "18px" }}>·</span>
+            <span>8 min de lectura</span>
+          </div>
+
+          {/* CÁPSULA RESUMEN */}
+          <div style={{
+            borderLeft: "4px solid #6b00da", backgroundColor: "#f5edff",
+            borderRadius: "0 12px 12px 0", padding: "18px 22px", marginBottom: "36px",
+          }}>
+            <p style={{ margin: 0, fontSize: "16px", fontWeight: 500, lineHeight: 1.7 }}>
+              <strong>Resumen rápido:</strong> La primavera en Estocolmo 2026 empieza a notarse en abril y explota en mayo. Los planes imprescindibles son los <strong>cerezos en Kungsträdgården</strong> (mediados de abril), <strong>Valborg el 30 de abril</strong>, pasear por <strong>Djurgården</strong>, el atardecer desde <strong>Skinnarviksberget</strong>, el <strong>Ocean Bus</strong> anfibio y explorar el <strong>archipiélago</strong> en ferry. Hay menos turistas que en verano y muchos planes son gratuitos.
+            </p>
+          </div>
+
+          <p style={{ fontSize: "19px", lineHeight: 1.75, marginBottom: "16px", fontWeight: 400 }}>
+            Primavera en Estocolmo es una cosa especial. Después de meses de oscuridad e invierno, cuando el sol vuelve y los días se alargan, los suecos salen a la calle como si fuera la primera vez que ven la luz. La energía de la ciudad cambia completamente — y si puedes estar aquí en ese momento, lo vas a entender.
+          </p>
+          <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "40px", color: "#333" }}>
+            Llevamos años viviendo y documentando Estocolmo desde <a href="https://www.instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>@quepasaestocolmoo</a>, y la primavera sigue siendo nuestra época favorita del año. Aquí tienes los planes que realmente merece la pena hacer — los que hacemos nosotros.
+          </p>
+
+          {/* H2 PRINCIPAL DE PLANES */}
+          <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "40px", letterSpacing: "-0.01em" }}>
+            ¿Cuáles son los mejores planes en Estocolmo en primavera 2026?
+          </h2>
+
+          {/* PLAN 1 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/Kungstradgarden1.webp" alt="Cerezos en flor en Kungsträdgården, Estocolmo, en abril" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>1</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Ver los cerezos en flor en Kungsträdgården</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              A mediados de abril, <a href="https://kungstradgarden.stockholm/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Kungsträdgården</a> se convierte en el parque más fotogénico de toda Escandinavia. Más de 60 cerezos japoneses — regalo de Japón al rey sueco en 1998 — forman un dosel de flores rosas que dura aproximadamente dos semanas.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              El <strong>28 de abril</strong> se celebra el Día del Cerezo en Flor, un festival gratuito de cultura japonesa con teatro Bunraku, música tradicional y puestos de comida. Para evitar multitudes, los locales van entre semana antes de las 10am — o se van a <strong>Lumaparken</strong> en Hammarby Sjöstad, que tiene 50 cerezos igual de bonitos y ningún turista.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/Kungstradgarden.webp" alt="Pétalos de cerezo cayendo en Kungsträdgården en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Cómo llegar:</strong> Metro línea azul o roja, estación Kungsträdgården. También caminando desde Gamla Stan en 10 minutos. <strong style={{ color: "#0f0f0f" }}>Mejor hora:</strong> entre semana antes de las 10am.
+            </div>
+          </div>
+
+          {/* PLAN 2 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/Valborg1.webp" alt="Celebración de Valborg en Estocolmo con miles de personas al aire libre" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>2</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Celebrar Valborg el 30 de abril</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              Valborg es la fiesta sueca de bienvenida al verano y es absolutamente imprescindible si estás en Estocolmo el 30 de abril. Miles de personas se reúnen en Evert Taubes terrass, en Riddarholmen, para cantar canciones tradicionales de primavera. El ambiente es único — mezcla de tradición, emoción colectiva y mucha cerveza al aire libre.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              También hay celebraciones en <a href="https://www.skansen.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Skansen</a>, en los campus universitarios y en prácticamente todos los barrios de la ciudad. Consulta el programa completo en <a href="https://visitstockholm.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Visit Stockholm</a>.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/Valborg_.webp" alt="Gente reunida en Riddarholmen durante Valborg en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Cómo llegar:</strong> Metro a Gamla Stan, luego 5 minutos caminando. <strong style={{ color: "#0f0f0f" }}>Entrada:</strong> Gratuita y abierta a todo el mundo.
+            </div>
+          </div>
+
+          {/* PLAN 3 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/Djurgarden.webp" alt="Paseo primaveral por Djurgården con árboles en flor y canal" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>3</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Pasear un día entero por Djurgården</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              Djurgården es la isla verde del centro de Estocolmo y en primavera se convierte en el plan perfecto para un día entero. Puedes pasear entre árboles en flor, visitar el <a href="https://www.vasamuseet.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>museo Vasa</a>, entrar al ABBA Museum o simplemente sentarte junto al canal con un fika mientras los barcos pasan.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              El parque <a href="https://www.skansen.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Skansen</a> abre con actividades especiales de primavera, incluyendo animales bebés y demostraciones de artesanía tradicional sueca. Es uno de esos planes que gustan tanto a niños como a adultos.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/Djurgarden1.webp" alt="Naturaleza y flores en Djurgården durante la primavera de Estocolmo" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Cómo llegar:</strong> Ferry desde Slussen o bus 67 desde el centro. También en bici con Donkey Republic — hay estaciones por toda la ciudad.
+            </div>
+          </div>
+
+          {/* PLAN 4 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/Skinnarviksberget.webp" alt="Vista panorámica de Estocolmo desde Skinnarviksberget al atardecer en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>4</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Ver el atardecer desde Skinnarviksberget</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              Skinnarviksberget, en Södermalm, ofrece la mejor vista panorámica de Estocolmo — y los locales lo saben. En primavera, cuando el sol se pone pasadas las 8pm, este lugar se convierte en el punto de encuentro favorito de la ciudad. La gente llega con cervezas, mantas y bocadillos para ver el atardecer sobre los canales.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              Es completamente gratuito, siempre abierto y no aparece en casi ninguna guía turística. Exactamente el tipo de plan que solo conoces si vives aquí — o si nos sigues en <a href="https://www.instagram.com/quepasaestocolmoo" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>@quepasaestocolmoo</a>.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/Skinnarviksberget3.webp" alt="Estocolmenses disfrutando del atardecer en Skinnarviksberget en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Cómo llegar:</strong> Metro a Zinkensdamm o Hornstull, luego 10 minutos caminando hacia arriba. <strong style={{ color: "#0f0f0f" }}>Mejor hora:</strong> 1 hora antes de la puesta de sol.
+            </div>
+          </div>
+
+          {/* PLAN 5 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/Oceanbus1.webp" alt="Ocean Bus anfibio recorriendo los canales de Estocolmo en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>5</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Subirse al Ocean Bus — el autobús anfibio</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              El <a href="https://www.stromma.com/es-es/estocolmo/excursiones/excursiones-en-autobus/ocean-bus/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Ocean Bus</a> es uno de los planes más originales de Estocolmo y en primavera es especialmente espectacular. Es un autobús anfibio que empieza el recorrido por las calles de la ciudad y de repente se lanza al agua — literalmente entra al canal y se convierte en barco. La cara de la gente en ese momento no tiene precio.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              El recorrido dura unos 50 minutos y combina las mejores vistas de la ciudad tanto desde tierra como desde el agua. Es perfecto para hacer con familia, amigos o en pareja. En primavera la luz es increíble y las fotos desde el agua con la ciudad de fondo son de otro nivel. Reserva con antelación porque se agota rápido.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/Oceanbus.webp" alt="Vista desde el Ocean Bus navegando por los canales de Estocolmo" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Punto de salida:</strong> Strömkajen, frente al Gran Hôtel. <strong style={{ color: "#0f0f0f" }}>Duración:</strong> aprox. 50 minutos. <strong style={{ color: "#0f0f0f" }}>Precio:</strong> desde 295 SEK adultos. Reserva en stromma.com.
+            </div>
+          </div>
+
+          {/* PLAN 6 */}
+          <div style={{ marginBottom: "64px" }}>
+            <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
+              <Image src="/archipielago.webp" alt="Ferry navegando por el archipiélago de Estocolmo en primavera" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+              <span style={{ backgroundColor: "#6b00da", color: "#fff", width: "32px", height: "32px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 700, flexShrink: 0 }}>6</span>
+              <h3 style={{ fontSize: "22px", fontWeight: 900, margin: 0 }}>Tomar el ferry por el archipiélago</h3>
+            </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              En mayo el archipiélago de Estocolmo empieza a despertar y puedes tomar un ferry desde Strömkajen para llegar a islas como Vaxholm, Grinda o Sandhamn. El paisaje desde el barco — agua, rocas, bosques y casitas rojas — es exactamente lo que imaginas cuando piensas en Suecia.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#333", marginBottom: "16px" }}>
+              Los ferris de <a href="https://waxholmsbolaget.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Waxholmsbolaget</a> son parte del transporte público y se pueden pagar con la tarjeta de transporte de Estocolmo (SL). Una excursión de medio día a Vaxholm es uno de los planes más suecos que puedes hacer en primavera.
+            </p>
+            <div style={{ position: "relative", width: "100%", height: "300px", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
+              <Image src="/archipielago1.webp" alt="Isla del archipiélago de Estocolmo con naturaleza primaveral" fill style={{ objectFit: "cover" }} />
+            </div>
+            <div style={{ backgroundColor: "#f9f9f9", borderRadius: "10px", padding: "14px 18px", fontSize: "14px", color: "#555" }}>
+              <strong style={{ color: "#0f0f0f" }}>Punto de salida:</strong> Strömkajen, frente al Gran Hôtel. Los trayectos van de 45 minutos a 2 horas dependiendo del destino.
+            </div>
+          </div>
+
+          {/* TIPS */}
+          <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "24px", letterSpacing: "-0.01em" }}>
+            ¿Qué tips debes saber antes de visitar Estocolmo en primavera?
+          </h2>
+          <div style={{
+            display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: "16px", marginBottom: "40px",
+          }}>
+            {[
+              { icon: "🧥", text: "Viste en capas — en abril puede hacer 5°C por la mañana y 15°C al mediodía. Sin excepción." },
+              { icon: "🎟️", text: "La Stockholm Card incluye transporte y más de 60 museos. Si vas a visitar varios, sale muy a cuenta." },
+              { icon: "🌅", text: "En mayo el sol se pone pasadas las 9pm. Aprovecha las horas de tarde — son las más bonitas." },
+              { icon: "🚲", text: "La ciudad es muy ciclable en primavera. Alquila una bici con Donkey Republic y muévete como un local." },
+              { icon: "💳", text: "Estocolmo es casi 100% sin efectivo. Tarjeta siempre, no necesitas coronas en físico para nada." },
+              { icon: "📅", text: "Valborg (30 abril) y el Día del Cerezo (28 abril) son los días más animados. Reserva alojamiento con antelación." },
+            ].map((tip, i) => (
+              <div key={i} style={{ backgroundColor: "#f9f9f9", borderRadius: "12px", padding: "20px 16px" }}>
+                <div style={{ fontSize: "22px", marginBottom: "10px" }}>{tip.icon}</div>
+                <p style={{ fontSize: "14px", lineHeight: 1.65, color: "#333", margin: 0 }}>{tip.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* TIP INSTAGRAM */}
+          <div style={{
+            backgroundColor: "#FFD600", borderRadius: "12px", padding: "18px 22px",
+            marginBottom: "56px", display: "flex", gap: "12px", alignItems: "flex-start",
+          }}>
+            <span style={{ fontSize: "20px" }}>📍</span>
+            <p style={{ margin: 0, fontSize: "15px", fontWeight: 600, lineHeight: 1.6 }}>
+              Tip local: seguimos la primavera en tiempo real en <a href="https://www.instagram.com/quepasaestocolmoo" target="_blank" style={{ color: "#6b00da", textDecoration: "none" }}>@quepasaestocolmoo</a> — publicamos cuándo florecen los cerezos, qué festivales están pasando y los mejores planes de cada semana.
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <h2 style={{ fontSize: "28px", fontWeight: 900, marginBottom: "24px", letterSpacing: "-0.01em" }}>
+            Preguntas frecuentes sobre Estocolmo en primavera 2026
+          </h2>
+          <div style={{ marginBottom: "56px", display: "flex", flexDirection: "column", gap: "16px" }}>
+            {faqItems.map((item, i) => (
+              <div key={i} style={{ backgroundColor: "#f9f9f9", borderRadius: "12px", padding: "20px 22px" }}>
+                <h3 style={{ fontSize: "16px", fontWeight: 700, margin: "0 0 8px 0", color: "#0f0f0f" }}>
+                  {item.question}
+                </h3>
+                <p style={{ fontSize: "15px", lineHeight: 1.7, color: "#444", margin: 0 }}>
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div style={{
+            backgroundColor: "#6b00da", borderRadius: "16px",
+            padding: "40px 32px", textAlign: "center",
+          }}>
+            <h3 style={{ color: "#fff", fontSize: "24px", fontWeight: 900, marginBottom: "12px" }}>
+              ¿Quieres saber qué está pasando en Estocolmo esta semana?
+            </h3>
+            <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "16px", marginBottom: "24px", lineHeight: 1.6 }}>
+              Publicamos los mejores planes, festivales y eventos de Estocolmo en español — cada semana, en tiempo real.
+            </p>
+            <a
+              href="https://www.instagram.com/quepasaestocolmoo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block", backgroundColor: "#FFD600", color: "#0f0f0f",
+                fontWeight: 700, fontSize: "15px", padding: "14px 32px",
+                borderRadius: "8px", textDecoration: "none",
+              }}
+            >
+              Seguir @quepasaestocolmoo
+            </a>
+          </div>
+
+        </article>
+
+        {/* FOOTER */}
+        <footer style={{ backgroundColor: "#0f0f0f", color: "#fff", padding: "32px 24px", textAlign: "center" }}>
+          <div style={{ fontWeight: 900, fontSize: "16px", marginBottom: "8px" }}>
+            ¿QUÉ PASA? <span style={{ color: "#6b00da" }}>ESTOCOLMO</span>
+          </div>
+          <p style={{ fontSize: "13px", color: "#888", marginBottom: "16px" }}>
+            © 2026 Qué Pasa Estocolmo. Todos los derechos reservados.
+          </p>
+          <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
+            {[
+              { label: "Instagram", url: "https://www.instagram.com/quepasaestocolmoo" },
+              { label: "TikTok", url: "https://www.tiktok.com/@quepasaestocolmo" },
+              { label: "Facebook", url: "https://www.facebook.com/quepasaestocolmo" },
+              { label: "YouTube", url: "https://www.youtube.com/@quepasaestocolmo" },
+            ].map((link) => (
+              <a
+                key={link.label}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#888", fontSize: "13px", textDecoration: "none" }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </footer>
+
+      </main>
     </>
   );
 }
