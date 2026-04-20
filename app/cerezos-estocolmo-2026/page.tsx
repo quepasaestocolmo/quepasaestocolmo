@@ -115,7 +115,7 @@ const jsonLd = {
           addressCountry: "SE",
         },
       },
-      description: "Festival gratuito de cultura japonesa en Kungsträdgården con teatro Bunraku, música tradicional, danzas Geiko Mai y puestos de comida y artesanía.",
+      description: "Festival gratuito de cultura japonesa en Kungstradgarden con teatro Bunraku, musica tradicional, danzas Geiko Mai y puestos de comida y artesania.",
       isAccessibleForFree: true,
       organizer: {
         "@type": "Organization",
