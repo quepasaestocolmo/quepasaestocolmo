@@ -4,6 +4,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Qué Pasa Estocolmo',
   description: 'Tu guía de Estocolmo en español',
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
