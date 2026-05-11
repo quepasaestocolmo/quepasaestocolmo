@@ -131,8 +131,14 @@ export default function ItinerarioEstocolmo3Dias() {
               <span style={{ display: "block", color: "#6b00da", fontSize: "15px" }}>ESTOCOLMO</span>
             </div>
           </Link>
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
             <Link href="/" style={{ fontSize: "14px", color: "#0f0f0f", textDecoration: "none" }}>Inicio</Link>
+            <Link
+              href="/en/blog/stockholm-3-day-itinerary-2026"
+              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: "#6b00da", textDecoration: "none", border: "1px solid #6b00da", padding: "6px 12px", borderRadius: "6px" }}
+            >
+              🌐 EN
+            </Link>
             <Link href="https://www.instagram.com/quepasaestocolmoo" target="_blank"
               style={{ backgroundColor: "#6b00da", color: "#fff", fontSize: "13px", fontWeight: 700, padding: "8px 18px", borderRadius: "8px", textDecoration: "none" }}>
               Seguirnos
@@ -203,10 +209,10 @@ export default function ItinerarioEstocolmo3Dias() {
             ¿Cómo moverse por Estocolmo? El abono SL explicado
           </h2>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            Antes de empezar el itinerario, lo más importante: hazte con un <strong>abono SL de 72 horas (350 SEK)</strong>. Cubre metro (tunnelbana), autobús, tranvía y ferris urbanos sin límite de viajes. Lo puedes comprar en la app SL, en las máquinas del aeropuerto o en cualquier estación. Paga con tarjeta — aquí prácticamente no se usa efectivo en ningún sitio.
+            Antes de empezar el itinerario, lo más importante: hazte con un <strong>abono SL de 72 horas (350 SEK)</strong>. Cubre metro (tunnelbana), autobús, tranvía y ferris urbanos sin límite de viajes. Lo puedes comprar en la <a href="https://sl.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>app SL</a>, en las máquinas del aeropuerto o en cualquier estación. Paga con tarjeta — aquí prácticamente no se usa efectivo en ningún sitio.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            Si llegas en avión, el <strong>Arlanda Express</strong> te lleva al centro en 18 minutos (~340 SEK). La alternativa económica es el Pendeltåg (tren regional SL + tasa de aeropuerto, ~151 SEK en total), que tarda unos 38 minutos pero es perfectamente cómodo.
+            Si llegas en avión, el <a href="https://www.arlandaexpress.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}><strong>Arlanda Express</strong></a> te lleva al centro en 18 minutos (~340 SEK). La alternativa económica es el Pendeltåg (tren regional SL + tasa de aeropuerto, ~151 SEK en total), que tarda unos 38 minutos pero es perfectamente cómodo.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }}>
             <div style={{ position: "relative", width: "100%", height: "220px", borderRadius: "12px", overflow: "hidden" }}>
@@ -298,10 +304,10 @@ export default function ItinerarioEstocolmo3Dias() {
           </div>
 
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            El segundo día es para <strong>Djurgården</strong>, la isla de los museos. Empieza temprano — antes de las 10:00 — en el <strong>Vasa Museum</strong>, uno de los museos más impresionantes de Europa. Dentro se conserva un barco de guerra del siglo XVII que se hundió en su primer viaje en 1628 y fue rescatado del fondo del mar en 1961. El 95% del barco es original. Es difícil de creer hasta que lo ves en persona.
+            El segundo día es para <strong>Djurgården</strong>, la isla de los museos. Empieza temprano — antes de las 10:00 — en el <a href="https://www.vasamuseet.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}><strong>Vasa Museum</strong></a>, uno de los museos más impresionantes de Europa. Dentro se conserva un barco de guerra del siglo XVII que se hundió en su primer viaje en 1628 y fue rescatado del fondo del mar en 1961. El 95% del barco es original. Es difícil de creer hasta que lo ves en persona.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            Por la tarde dedica 2-3 horas a <strong>Skansen</strong>, el museo al aire libre más antiguo del mundo. Es una recreación de cómo vivía Suecia en distintas épocas históricas: casas tradicionales, animales nórdicos (alces, linces, osos) y artesanos trabajando. Los niños lo adoran, pero los adultos también se pierden en él fácilmente.
+            Por la tarde dedica 2-3 horas a <a href="https://www.skansen.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}><strong>Skansen</strong></a>, el museo al aire libre más antiguo del mundo. Es una recreación de cómo vivía Suecia en distintas épocas históricas: casas tradicionales, animales nórdicos (alces, linces, osos) y artesanos trabajando. Los niños lo adoran, pero los adultos también se pierden en él fácilmente.
           </p>
 
           <div style={{ position: "relative", width: "100%", height: "340px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
@@ -368,10 +374,10 @@ export default function ItinerarioEstocolmo3Dias() {
           </div>
 
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            El tercer día merece salir del centro. Tienes dos opciones perfectas. Si quieres naturaleza, toma el ferry hacia el <strong>archipiélago de Estocolmo</strong>. Islas como <strong>Vaxholm</strong> (45 min en barco) o <strong>Fjäderholmarna</strong> (25 min) son ideales para un día: cafés con vistas, senderos por las rocas y el silencio del mar Báltico. Los ferris salen desde Strömkajen, justo frente al Gran Hotel.
+            El tercer día merece salir del centro. Tienes dos opciones perfectas. Si quieres naturaleza, toma el ferry hacia el <strong>archipiélago de Estocolmo</strong>. Islas como <strong>Vaxholm</strong> (45 min en barco) o <strong>Fjäderholmarna</strong> (25 min) son ideales para un día: cafés con vistas, senderos por las rocas y el silencio del mar Báltico. Los ferris salen desde Strömkajen con <a href="https://www.waxholmsbolaget.se" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}>Waxholmsbolaget</a>, justo frente al Gran Hotel.
           </p>
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
-            Si prefieres historia y arquitectura, el <strong>Palacio de Drottningholm</strong> — Patrimonio Mundial de la UNESCO — está a 30 minutos en barco desde el Ayuntamiento. Es la residencia oficial de la familia real sueca y sus jardines son espectaculares. La combinación de ir en barco por el lago Mälaren y llegar a un palacio barroco es difícil de superar.
+            Si prefieres historia y arquitectura, el <a href="https://www.kungligaslotten.se/vara-slott-och-miljöer/drottningholms-slott.html" target="_blank" rel="noopener noreferrer" style={{ color: "#6b00da" }}><strong>Palacio de Drottningholm</strong></a> — Patrimonio Mundial de la UNESCO — está a 30 minutos en barco desde el Ayuntamiento. Es la residencia oficial de la familia real sueca y sus jardines son espectaculares. La combinación de ir en barco por el lago Mälaren y llegar a un palacio barroco es difícil de superar.
           </p>
 
           <div style={{ backgroundColor: "#fffbe6", border: "2px solid #FFD600", borderRadius: "12px", padding: "20px 22px", marginBottom: "24px" }}>
