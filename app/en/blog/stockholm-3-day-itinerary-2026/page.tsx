@@ -348,7 +348,7 @@ export default function Stockholm3DayItinerary() {
           </p>
 
           <div style={{ position: "relative", width: "100%", height: "400px", borderRadius: "16px", overflow: "hidden", marginBottom: "24px" }}>
-            <Image src="/Vinterviken-.webp" alt="Stockholm archipelago — thousands of islands just outside the city" fill style={{ objectFit: "cover" }} />
+            <Image src="/archipielago.webp" alt="Stockholm archipelago — thousands of islands just outside the city" fill style={{ objectFit: "cover" }} />
           </div>
 
           <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "16px", color: "#333" }}>
